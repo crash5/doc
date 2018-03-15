@@ -1,0 +1,16 @@
+= Docs and tips collection
+Imre Nagy
+:experimental:
+:sectlinks:
+:sectanchors:
+:linkcss:
+:toc: left
+
+ifdef::env-github[]
+:toc-placement!:
+image:https://travis-ci.org/crash5/doc.svg?branch=master["Build Status", link="https://travis-ci.org/crash5/doc"]
+endif::[]
+
+ifndef::env-github[]
+include::default-index.adoc[]
+endif::[]

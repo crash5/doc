@@ -1,0 +1,111 @@
+= MySQL
+
+[source, sql]
+----
+% : karaktersorozatot helyettesít
+_ : egy karaktert helyettesít
+
+mysql -u username -p
+
+select * from ezmegaz into outfile FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+mysqldump -u username -ppassword > /tmp/alldatabases.sql
+mysqldump -u username -ppassword databasename tablename > /tmp/databasename.tablename.sql
+
+
+SET PASSWORD = PASSWORD('new_pass');
+
+.csv: LOAD DATA INFILE '/tmp/filename.csv' INTO TABLE [table name] FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' (field1,field2,field3);
+tab : LOAD DATA LOCAL INFILE "infile.txt" INTO TABLE [table name];
+(OPTIONALLY  ENCLOSED BY '\"' ESCAPED BY '\\\\')
+
+
+create database [databasename];
+drop database [database name];
+ALTER DATABASE [database name] CHARACTER SET utf8;
+show databases;
+use [database name];
+
+CREATE TABLE [table name] (
+  firstname VARCHAR(20) not null auto_increment primary key,
+  lastname VARCHAR(35) default 'bato',
+  email VARCHAR(35),
+  phone VARCHAR(25),
+  datestamp DATE,
+  timestamp time,
+  pgpemail VARCHAR(255)
+);
+CREATE TABLE [table name] (
+  id int auto_increment,
+  primary key (`id`)
+);
+
+
+show tables;
+drop table [table name];
+describe [table name]; = show columns from [table name];
+show create table [table name];
+
+
+INSERT INTO [table name] (Host,User,Password) VALUES('%','user',PASSWORD('password'));
+INSERT INTO [table name] VALUES('12','home','mobile');
+
+
+SELECT * FROM [table name];
+SELECT * FROM [table name] WHERE [column name] = "whatever";
+SELECT * FROM [table name] WHERE [column name] IN ("Kovács", "Tóth");
+SELECT * FROM [table name] WHERE fizetes BETWEEN 20000 AND 30000 LIMIT 10,20;
+SELECT * FROM [table name] ORDER BY name, email ASC/DESC;
+SELECT name AS nev,fizu FROM [table name] GROUP BY name;
+select id,count(*) as n from [table name] group by id having  n > 1;
+---
+SELECT * FROM [table name] WHERE name like "Bob%" AND phone_number = '3444444'  and price=(SELECT MAX(price) FROM shop);
+SELECT * FROM [table name] WHERE rec RLIKE "^a$";
+SELECT nev FROM pub WHERE MATCH(nev) AGAINST('arany -ászok' IN BOOLEAN MODE);
+SELECT * FROM innivalo_kategoria LEFT OUTER JOIN innivalo ON innivalo_kategoria_id = kategoria;
+select * from pub_innivalo as t1 where felveve = (select max(felveve) from pub_innivalo where pub = t1.pub and innivalo = t1.innivalo);
+
+
+DELETE from [table name] where [column name] = "whatever";
+
+RENAME table [old name] to [new name];
+
+
+update [table name] set fizetes=(fizetes * 1.2);
+update [table name] set fizetes = 255, nev = "Bela", kor = 15 where id = 1;
+update [table name] set [column name] = "new_value" WHERE record_name = "value";
+update [database name] set [table name] = REPLACE([table name],"[String to Search For]","[String Replacement]");
+
+
+ALTER TABLE pub ADD FULLTEXT(nev);
+
+alter table [table name] add constraint check [column name] in ('bla',1,2,'asd');
+
+alter table [table name] add primary key (column name);
+
+alter table [table name] alter [column name] SET DEFAULT blaa;
+
+alter table [table name] add column [new column name] varchar(20);
+alter table [table name] add column [new column name] varchar(20) AFTER col_name;
+alter table [table name] drop column [column name];
+
+alter table [table name] modify [column name] VARCHAR(3) First auto_increment;
+alter table [table name] change [old column name] [new column name] varchar(50);
+
+alter table [table name] add unique ([column name]);
+alter table [table name] drop index [colmn name];
+
+
+select lookup.illustrationid, lookup.personid,person.birthday from lookup
+left join person on lookup.personid=person.personid=statement to join birthday in person table with primary illustration id;
+
+
+field1 = value1
+field1 <> value1
+field1 LIKE "value _ %"
+field1 IS NULL
+field1 IS NOT NULL
+field1 IS IN (value1, value2)
+field1 IS NOT IN (value1, value2)
+condition1 AND condition2
+condition1 OR condition2
+----

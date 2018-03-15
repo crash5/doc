@@ -1,0 +1,27 @@
+= Patch
+
+== How to use diff
+
+.The basic use of diff is
+[source, bash]
+diff -u original.txt modified.txt > file.patch
+
+.If you want to use diff against two source tree, the command is
+[source, bash]
+diff -rupN original modified > program.patch
+
+
+== How to use patch
+
+.To apply the patch, change into the same directory as the unmodified file and execute
+[source, bash]
+patch < file.patch
+
+.This is how to apply patch to an entire directory
+[source, bash]
+patch -p0 < program.patch
+
+.Patch applied can be simply removed by adding the -R switch
+[source, bash]
+patch -p0 -R < program.patch
+patch -R < file.patch

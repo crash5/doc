@@ -1,0 +1,21 @@
+= vim
+
+== Config
+
+[%header]
+|===
+| Parancs | Magyarázat
+| fenc (fileencoding) | Set utf-8 encoding (latin1 is usual).
+| ft (filetype) | Set .module as php file type (with syntax).
+| ff (fileformat) | -
+| ai (autoindent) | Copy indent when starting new line.
+| si (smartindent) | Indent when starting a new line after '{'.
+| sw (shiftwidth) | Number of spaces to use for autoindent steps.
+| ts (tabstop) | Number of spaces that a tab counts for.
+| et (expandtab) | Use spaces to insert a tab.
+| nu (number) | Precede each line with its line number.
+| fdm (foldmethod) | Fold code by indent.
+| fdn (foldnestmax) | 1 maximum nesting (functions in module).
+|===
+
+Pl: `vim:fenc=utf-8:ft=php:ai:si:ts=2:sw=2:et:nu:fdm=indent:fdn=1:`

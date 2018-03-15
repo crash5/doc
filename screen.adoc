@@ -1,0 +1,85 @@
+= Screen
+:experimental:
+
+[%header]
+|===
+| Parancs | Magyarázat
+| screen -c /dev/null | config betoltes..
+| screen -S bla | létrehozás bla névvel
+| screen -rD | eloterbehoz (D máshol futó screent is előhozza)
+| kbd:[ctrl+a d] | háttérbe küld
+| kbd:[ctrl+a c] | új ablak
+| kbd:[ctrl+a shift+a] | nevet ad
+| kbd:[ctrl+a +"] | ablaklista
+| kbd:[ctrl+a ESC] | másoló mód, szöveg kivál space
+| kbd:[ctrl+a +\]] | beilleszt
+| kbd:[C-a] :bufferfile notes.txt | noteszfájl beállítás...
+| screen -list |
+|===
+
+== Quick Reference
+
+=== Getting in
+
+|===
+| start a new screen session: | screen
+| attach to a running session: | screen -r
+|===
+
+the ultimate attach: `screen -dRR`` (Attaches to a screen session. If the session is attached elsewhere, detaches that other display. If no session exists, creates one. If multiple sessions exist, uses the first one.)
+
+
+=== Escape key
+
+All screen commnds are prefixed by an escape key, by default C-a (thatĺs Control-a, sometimes written ^A). To send a literal C-a to the programs in screen, use C-a a.
+Getting out
+
+|===
+| detach: | kbd:[C-a d]
+| exit screen: | exit all of the programs in screen.
+| force-exit screen: | kbd:[C-a C-\ ] (not recommended)
+|===
+
+
+=== Help
+
+See help: kbd:[C-a ?] (lists keybindings)
+
+
+=== Window Management
+
+|===
+| create new window: | kbd:[C-a c]
+| change to last active window: | kbd:[C-a C-a]
+| change to window by number: | kbd:[C-a <number>] (only for windows 0 to 9)
+| change to window by number or name: | kbd:[C-a ' <number or title>]
+| change to next window in list: | kbd:[C-a n] or kbd:[C-a <space>]
+| change to previous window in list: | kbd:[C-a p]
+| see window list: | kbd:[C-a ô]
+| close current window: | Close all applications in the current window (including shell)
+| kill current window: | kbd:[C-a K] (not recommended)
+|===
+
+
+=== Split screen
+
+|===
+| split display: | kbd:[C-a S]
+| jump to next display region: | kbd:[C-a tab]
+| remove current region: | kbd:[C-a X]
+| remove all regions but the current one: | kbd:[C-a Q]
+|===
+
+
+=== Misc
+
+|===
+| redraw window: | kbd:[C-a C-l]
+| enter copy mode: | kbd:[C-a [] (also used for viewing scrollback buffer)
+| paste: | kbd:[C-a \]]
+| monitor window for activity: | kbd:[C-a M]
+| monitor window for silence: | kbd:[C-a _]
+| enter digraph: | kbd:[C-a C-v]
+| lock (password protect) display: | kbd:[C-a x]
+| enter screen command: | kbd:[C-a :]
+|===

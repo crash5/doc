@@ -1,0 +1,27 @@
+= UTP kábel bekötés
+
+*Blankolás*: 15/12 mm
+
+Ha lefelé álló pöcökkel bedugod (feléd áll ki a dugóból a kábel), akkor balról kezdődnek a színek. A színek bekötési sorrendje a https://en.wikipedia.org/wiki/TIA/EIA-568[TIA/EIA-568|TIA/EIA-568B] szabvány szerint értendő.
+
+Egyenes: B-B +
+Kereszt: A-B
+
+A::
+ZF, Z, NF, K, KF, N, BF, B
+
+B::
+NF, N, ZF, K, KF, Z, BF, B
+
+[%header]
+|===
+| Rövidítés | Szín
+| NF | Narancs-fehér
+| N | Narancs
+| ZF | Zöld-fehér
+| K | Kék
+| KF | Kék-fehér
+| Z | Zöld
+| BF | Barna-fehér
+| B | Barna
+|===

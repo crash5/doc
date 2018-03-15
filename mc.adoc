@@ -1,0 +1,21 @@
+= Midnight Commander
+:experimental:
+
+[source, bash]
+alias mc='. /usr/lib/mc/mc-wrapper.sh'
+
+[%header]
+|===
+| Bill. kombináció | Funkció
+| kbd:[CTRL+o] | Parancssor megjelenítése
+| kbd:[CTRL+s + betük] | adott fájlra/mappára ugrás
+| kbd:[CTRL+ENTER] | adott fájl/mappa nevének másolása a parancssorba
+| kbd:[ESC+TAB] | parancssorban kiegészítés
+| kbd:[ALT+n] | sorszámok edit/view ablakban
+| kbd:[ALT+i] | másik panel váltása az aktuális könyvtárra
+|===
+
+
+== Config
+
+config/mc/ini: `skin=modarin256`

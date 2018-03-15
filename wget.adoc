@@ -1,0 +1,39 @@
+= Wget
+
+== Mirror wget
+
+[source, bash]
+----
+copy /b *.txt combined.txt
+wget -m -w 2 -p  -k -E -P\wget_files\example1 http://www.yourdomain.com
+wget -m -w 3 -p -P\wget_files\example2 ftp://username:password@ftp.yourdomain.com
+
+( --no-parent -nc -c )
+
+wget --save-cookies cookies.txt --keep-session-cookies --post-data 'login_e_mail=&login_passwd=' http://www.yourdomain.com
+
+wget --load-cookies cookies.txt -w 1 -i files.txt
+wget --load-cookies cookies.txt --content-disposition -w 2 -i files.txt
+----
+
+
+== Kapcsolók
+
+[%header]
+|===
+| Kapcsoló | Leírás
+| -A list; list | accept
+| -R list; list | reject
+| -E | html extension
+| -k | linkek konvertálása
+| -w | vár mp-t
+| -m | mirror
+| -l | mélység
+| -i | fájból veszi a címeket
+| -nH | kikapcsolja gazdagép-névvel megegyezo könyvtár létrehozását
+| --ftp-user | 
+| --ftp-password | 
+| --http-user | 
+| --http-password | 
+| --content-disposition | ha a letöltés nem a megfelelő névvel jön létre (pl index.html stb.)
+|===

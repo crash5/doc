@@ -1,0 +1,60 @@
+= TAR
+
+.Kicsomagolni tar állományt
+[source, bash]
+tar -xvvf file.tar
+
+.Megadott könyvtárba kicsomagolás
+[source, bash]
+tar -xvf file.tar -C /destination/dir/
+
+
+.Kitömöríteni tar.Z állományt
+[source, bash]
+tar -xvZf file.tar.Z
+
+.Kitömöríteni gzippelt állományt
+[source, bash]
+tar -xvzf file.tar.gz
+
+.Kitömöríteni bzippelt állományt
+[source, bash]
+tar -xvjf file.tar.bz2 (vagy tar -xvIf file.tar.bz2 régebbi tar esetén)
+
+.Arhiv készítés c kapcsolóval az x helyett, eloször az arhív állományt kell magadni majd utána a tömörítendő anyagot. pl. :
+[source, bash]
+tar cvvjf file.tar.bz2 /tmp/file1.kit /mashol/file2.kit /teljesdir
+
+.biztimásolat
+[source, bash]
+tar --exclude=bm-20071027.tgz -Lczf bm-20071027.tgz ~
+
+== Backup
+A snapshot fálban tárolja a lementett fájlok adatait, ugyan azt a fájlt többször megadva incrementális mentés jön létre.
+
+.Biztonsági másolat készítés
+[source, bash]
+tar --listed-incremental=work.snapshot -cvf work-20150105-0937.full.tar /path/to/dir
+
+.Visszaállítás
+[source, bash]
+tar --listed-incremental=/dev/null -xvf work-20150105-0937.full.tar
+
+
+== Kapcsolók
+
+[%header]
+|===
+| Kapcsoló | Magyaráza
+| -v | verbose mode
+| -c | becsomagolás
+| -x | kicsomagolás
+| -z | gzip
+| -j | bzip
+| -Z | Z állomány
+| -f <filename> | kimenetei/bemeneti fájl használata
+| -C <path> | kicsomagolás a megadott helyre
+| -h | követi a symlinkeket.
+| --exclude=valami | nem veszi figyelembe a "valami" -t
+| --listed-incremental=<filename> | inkrementális mentések készítése
+|===

@@ -1,0 +1,24 @@
+= Preferred Editor Shortcuts
+:experimental:
+
+
+== Windows
+
+[options="header", align="center"]
+|===
+| Shortcut | Purpose
+| kbd:[Ctrl + Shift + D] | Duplicate line
+| kbd:[Ctrl + Shift + S] | Save all
+| kbd:[Ctrl + Alt + S] | Save as
+| kbd:[Ctrl + \ ] | Toggle comment
+| kbd:[Shift + Del] | Cut line
+| kbd:[Ctrl + Shift + Up] | Move line up
+| kbd:[Ctrl + Shift + Down] | Move line down
+| kbd:[Alt + Shift + Right] | Expand selection
+| kbd:[Alt + Shift + Left] | Shrink selection
+| kbd:[Alt + Left] | Previous cursor position
+| kbd:[Alt + Right] | Nex cursor position
+| kbd:[Ctrl + Shift + V] | Paste from multi clipboard
+| kbd:[Ctrl + Shift + U] | Convert to uppercase
+| kbd:[Ctrl + Shift + L] | Convert to lowercase
+|===

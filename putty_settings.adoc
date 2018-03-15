@@ -1,0 +1,60 @@
+= Putty Settings
+:experimental:
+
+
+.menu:Session[]
+* Connection type: `SSH`
+* Close window on exit: `Never`
+
+.menu:Terminal[Features]
+* Disable Application keypad mode `+`
+
+.menu:Terminal[Bell]
+* Action to happen when a bell occurs: `Visual bell (flash window)`
+* Taskbar/caption indication: `Flashing`
+
+.menu:Window[]
+* Lines of scrollback: `20000`
+* Reset scrollback on keypress `+`
+* Reset scrollback on display activity `-`
+
+.menu:Window[Appearance]
+* Font: `Lucida Console, 9-point`
+* Font quality: `ClearType`
+* Gap between text and window edge: `3`
+
+.menu:Window[Behaviour]
+* Window closes on ALT-F4 `+`
+* System menu appears on ALT alone `+`
+* Full screen on Alt-Enter `+`
+
+.menu:Window[Translation]
+* Character set: `UTF-8`
+* Handling of line drawing characters: `Unicode`
+
+.menu:Window[Selection]
+* Action of mouse buttons: `xterm (Right extends, Middle pastes)`
+* Paste to clipboard in RTF as well as plain text `+`
+
+.menu:Window[Colours]
+
+[%header]
+|===
+| Name | Red | Green | Blue
+| ANSI Blue | 74 | 74 |255
+| ANSI Blue Bold| 140 | 140 | 255
+|===
+
+.menu:Connection[]
+* Seconds between keepalives (0 to turn off): 25
+
+.menu:Connection[SSH]
+* Enable compression `+`
+* Preferred SSH protocol version: `2 only`
+
+.menu:Connection[SSH > X11]
+* Enable X11 forwarding `+`
+
+
+'''
+Original Source: http://dag.wieers.com/blog/improving-putty-settings-on-windows

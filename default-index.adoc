@@ -1,0 +1,37 @@
+:leveloffset: +1
+
+include::preferred_editor_shortcuts.adoc[]
+
+include::putty_settings.adoc[]
+
+include::ivr-phone-codes.adoc[]
+
+include::utp.adoc[]
+
+include::recipe.adoc[]
+
+:leveloffset: 0
+
+== Unix
+
+:leveloffset: +2
+
+include::awk.adoc[]
+
+include::bash.adoc[]
+
+include::mc.adoc[]
+
+include::mysql.adoc[]
+
+include::patch.adoc[]
+
+include::screen.adoc[]
+
+include::sed.adoc[]
+
+include::tar.adoc[]
+
+include::vim.adoc[]
+
+include::wget.adoc[]
