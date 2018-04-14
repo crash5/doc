@@ -1,0 +1,31 @@
+sudo: required
+
+services:
+  - docker
+
+language: minimal
+
+install: true
+
+before_script:
+  - mkdir -p output
+  - docker pull asciidoctor/docker-asciidoctor
+
+script:
+  - docker run -v ${TRAVIS_BUILD_DIR}:/documents/ --name asciidoc-to-html asciidoctor/docker-asciidoctor asciidoctor -D /documents/output *.adoc
+
+after_error:
+  - docker logs asciidoc-to-html
+
+after_failure:
+  - docker logs asciidoc-to-html
+
+before_deploy:
+  - cd output
+  - mv README.html index.html
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: ${GH_TOKEN}
+  local-dir: output
