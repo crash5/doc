@@ -5,6 +5,13 @@ services:
 
 language: minimal
 
+git:
+  depth: false
+
+branches:
+  only:
+  - master
+
 install: true
 
 before_script:
