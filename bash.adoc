@@ -32,6 +32,8 @@ python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"
 [%header]
 |===
 | Kombináció | Leírás
+| kbd:[CTRL + r] | rekurzív keresés a parancs historyban
+| kbd:[CTRL + l] | konzol ablak törlése/frissítése
 | kbd:[CTRL + u] | kurzortól balra eső rész levágása
 | kbd:[CTRL + k] | kurzortól jobbra eső rész levágása
 | kbd:[CTRL + a] | sor elejére ugrás
