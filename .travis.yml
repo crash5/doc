@@ -30,6 +30,7 @@ after_failure:
 before_deploy:
   - cd output
   - mv README.html index.html
+  - cp -R ../images images
 
 deploy:
   provider: pages
