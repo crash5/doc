@@ -1,8 +1,9 @@
 = Origami
+:linkattrs:
 
-* link:images/origami/basket.jpg[Basket]
-* link:images/origami/envelope.jpg[Envelope]
-* link:images/origami/envelope2.jpg[Envelope 2]
-* link:images/origami/rectangle_box.jpg[Rectangle box]
-* link:images/origami/rectangle_box2.jpg[Rectangle box 2]
-* link:images/origami/square_box.jpg[Square box]
+* link:images/origami/basket.jpg[Basket, window="_blank"]
+* link:images/origami/envelope.jpg[Envelope, window="_blank"]
+* link:images/origami/envelope2.jpg[Envelope 2, window="_blank"]
+* link:images/origami/rectangle_box.jpg[Rectangle box, window="_blank"]
+* link:images/origami/rectangle_box2.jpg[Rectangle box 2, window="_blank"]
+* link:images/origami/square_box.jpg[Square box, window="_blank"]
