@@ -14,6 +14,10 @@ update-alternatives --config editor
 [source, bash]
 find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"
 
+.tree paranccsal, - git mappa, + fájlok
+[source, bash]
+find . -not -path "./.git/*" | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"
+
 .naptár
 [source, bash]
 cal | sed "s/^/ /;s/$/ /;s/ $(date +%e) / $(date +%e | sed 's/./#/g') /"
