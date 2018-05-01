@@ -1,0 +1,5 @@
+= Other files
+:linkattrs:
+
+* link:files/alapvetoismeretek-matematika.doc[Alapvető ismeretek - Matematika (doc), window="_blank"]
+* link:files/HonvedelmiIsmeretek_zsebkonyv.doc[Honvédelmi Ismeretek zsebkönyv (doc), window="_blank"]

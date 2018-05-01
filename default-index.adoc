@@ -12,6 +12,8 @@ include::recipe.adoc[]
 
 include::origami.adoc[]
 
+include::other_files.adoc[]
+
 :leveloffset: 0
 
 == Unix
