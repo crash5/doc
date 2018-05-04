@@ -32,7 +32,6 @@ before_deploy:
   - mv README.html index.html
   - cp -R ../images images
   - cp -R ../files files
-  - cp ../CNAME CNAME
 
 deploy:
   provider: pages
