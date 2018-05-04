@@ -6,7 +6,7 @@ services:
 language: minimal
 
 git:
-  depth: false
+  depth: 1
 
 branches:
   only:
