@@ -37,4 +37,5 @@ deploy:
   provider: pages
   skip-cleanup: true
   github-token: ${GH_TOKEN}
+  fqdn: doc.veluna.eu
   local-dir: output
