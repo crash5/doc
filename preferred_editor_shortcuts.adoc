@@ -7,7 +7,7 @@
 [options="header", align="center"]
 |===
 | Shortcut | Purpose
-| kbd:[Ctrl + Shift + D] | Duplicate line
+| kbd:[Ctrl + Shift + D] | Duplicate selection
 | kbd:[Ctrl + Shift + S] | Save all
 | kbd:[Ctrl + Alt + S] | Save as
 | kbd:[Ctrl + \ ] | Toggle comment

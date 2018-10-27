@@ -5,7 +5,7 @@ IVR:: Interactive Voice Response
 Adott karakter automatikus küldése a hívott félnek: `Telefonszám+kontroll karakter+szám`
 
 Pl. kapcsolás után vár 2 mp-et, elküldi az 1-est, vár 2*2 másodpercet, elküldi a 4-est.: +
-`+36205554444,1,,4``
+`+36205554444,1,,4`
 
 [%header]
 |===
