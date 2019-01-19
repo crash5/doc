@@ -45,6 +45,7 @@ python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"
 | kbd:[CTRL + INSERT] | vágólapra másolás
 | kbd:[SHIFT + INSERT] | vágólapról beillesztés
 | kbd:[ALT + .] | előző parancs első paraméterének behelyettesítése
+| kbd:[ALT + <NUM> + .] | előző parancs NUM-adik helyen lévő paraméterének behelyettesítése
 | kbd:[ALT + *] | a beírt wildcard-ok behelyettesítése
 | kbd:[CTRL + ALT + e] | alias, history, expansion alkalmazás a beírt parancson
 | kbd:[CTRL + x + e] | beírt parancs szerkesztése a VISUAL-ban megadott szerkesztőben
