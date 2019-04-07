@@ -21,4 +21,8 @@
 | kbd:[Ctrl + Shift + V] | Paste from multi clipboard
 | kbd:[Ctrl + Shift + U] | Convert to uppercase
 | kbd:[Ctrl + Shift + L] | Convert to lowercase
+| kbd:[Ctrl + F4] | Toggle header/source in other window
+| kbd:[F4] | Toggle header/source
+| kbd:[Ctrl + F2] | Follow symbol in other window
+| kbd:[F2] | Follow symbol
 |===
