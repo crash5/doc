@@ -13,6 +13,9 @@ jobs:
       with:
         fetch-depth: 1
 
+    - name: Create output directory
+      run: mkdir output
+
     - name: Generate HTML from AsciiDoc files
       uses: docker://asciidoctor/docker-asciidoctor:latest
       with:
