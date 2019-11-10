@@ -1,0 +1,34 @@
+name: Publish to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+
+    - name: Generate HTML from AsciiDoc files
+      uses: docker://asciidoctor/docker-asciidoctor:latest
+      with:
+        args: asciidoctor -D /github/workspace/output *.adoc
+
+    - name: Copy additional files to output dir and create index
+      run: |
+        cp -R images/. output/images/
+        cp -R files/. output/files/
+        mv output/README.html output/index.html
+
+    - name: Deploy to GitHub Pages
+      env:
+        INPUT_TOKEN: ${{ secrets.GH_TOKEN }}
+        INPUT_SOURCEDIRECTORY: output
+        INPUT_FQDN: doc.veluna.eu
+      run: |
+        wget https://raw.githubusercontent.com/crash5/ghaction-publish-ghpages/v1/entrypoint.sh
+        bash ./entrypoint.sh
