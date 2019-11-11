@@ -8,7 +8,7 @@ Imre Nagy
 
 ifdef::env-github[]
 :toc-placement!:
-image:https://travis-ci.com/crash5/doc.svg?branch=master["Build Status", link="https://travis-ci.com/crash5/doc"]
+image:https://github.com/crash5/doc/workflows/Publish to GitHub Pages/badge.svg?branch=master[Build Status]
 endif::[]
 
 ifndef::env-github[]
