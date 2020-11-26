@@ -1,0 +1,37 @@
+= Subtree
+
+== Add subtree
+[source, bash]
+----
+git fetch <repo>
+git read-tree -u --prefix=vim/pack/bundle/start/ FETCH_HEAD
+----
+
+
+== Update subtree from original repo
+[source, bash]
+----
+git fetch <repo>
+git merge -s subtree --squash FETCH_HEAD
+# if not work reset the merge and use this
+git merge -X subtree=vim/pack/bundle/start/ --squash FETCH_HEAD
+----
+
+
+== Add commit to original subtree for share with the original repo
+[source, bash]
+----
+git fetch <repo>
+git checkout -b backport-plugin FETCH_HEAD
+git cherry-pick -x --strategy=subtree <commit you want>
+#git push
+----
+
+
+== Extract dir to a sperate subtree
+[source, bash]
+----
+git checkout -b split-plugin
+git filter-branch --subdirectory-filter vim/pack/own_plugin
+git push -u <new repo for the dir> split-plugin:master
+----
