@@ -9,9 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-      with:
-        fetch-depth: 1
+    - uses: actions/checkout@v2
 
     - name: Create output directory
       run: mkdir output
@@ -29,7 +27,7 @@ jobs:
 
     - name: Deploy to GitHub Pages
       env:
-        INPUT_TOKEN: ${{ secrets.GH_TOKEN }}
+        INPUT_TOKEN: ${{ github.token }}
         INPUT_SOURCEDIRECTORY: output
         INPUT_FQDN: doc.veluna.eu
       run: |
