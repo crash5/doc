@@ -8,6 +8,10 @@
 dpkg-reconfigure tzdata
 dpkg-reconfigure locales
 update-alternatives --config editor
+
+
+stty -a
+stty stop undef
 ----
 
 .tree paranccsal
