@@ -64,7 +64,7 @@ restore: dd of=/rot/sda.mbr if=/dev/sda
 
 ## Partitioning
 
-list: `lsblk`
+list: `lsblk`, `blkid`
 ruin mbr: `dd if=/dev/zero of=/dev/sdb count=1 bs=512`
 
 ```
