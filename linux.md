@@ -6,6 +6,7 @@ cpio -id < <initramfs>
 systemd-analyze
 systemd-analyze blame
 systemd-analyze critical-chain
+systemd-analyze plot > boot.svg
 
 
 systemctl isolate <multi-user.target>
@@ -21,10 +22,13 @@ systemctl list-unit-files
 systemctl list-units
 systemctl list-units --type service --state running
 systemctl edit <service>
+systemctl edit --full
 systemctl --failed --all
 systemctl set-property
 (ip accounting, ipaddressallow.../devicepolicy, deviceallow)
 
+systemctl list-dependencies
+systemctl list-dependencies --reverse
 
 journalctl
 journalctl -u <unit>
