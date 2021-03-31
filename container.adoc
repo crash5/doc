@@ -1,0 +1,122 @@
+= Containers
+
+[source, bash]
+----
+rsync -r --copy-links -e "ssh -i $(minikube ssh-key)" docker@$(minikube ip):/var/log/containers/old/* .
+
+== Docker
+[source, bash]
+----
+docker login <server-name> --username <user> --password <pass>
+
+docker exec -it <container> /bin/bash
+
+docker pull <image>
+
+docker export <image> > latest.tar
+docker cp <image>:<path>
+
+docker run <image>
+docker run <image> --volume $PWD:$PWD --workdir $PWD
+docker run -ti --rm <image>
+docker container stop <container-name>
+
+docker attach <name or id>
+
+docker swarm init
+docker swarm leave --force
+
+docker stack deploy -c docker-compose.yml <stack>
+docker stack rm getstartedlab
+
+docker image ls
+docker container ls --all
+docker node ls
+docker service ls
+docker service ps <service>
+
+docker inspect <imageid>
+
+docker rm $(docker ps -a -q)
+docker rmi $(docker images -q)
+----
+
+== Kubernetes
+
+[source, bash]
+----
+kubectl config view
+kubectl config current-context
+kubectl config use-context <context>
+kubectl config set-context --current --namespace=$USER
+
+kubectl create secret docker-registry <name> --docker-server=<server> --docker-username <user> --docker-password <pass>
+
+kubectl get pod -o wide --all-namespaces
+kubectl get service -o wide --all-namespaces
+kubectl get ingress -o wide --all-namespaces
+
+kubectl get nodes -o wide # get IPs
+kubectl get service -o wide # get PORTs for NodePort
+
+kubectl exec -it <POD_NAME> nslookup <ClusterIP> # find out dns name from cluster ip
+
+kubectl describe node # find out node ip address
+
+kubectl describe services ingress-nginx --namespace=ingress-nginx
+
+kubectl get pods --namespace {{ .Release.Namespace }} -l "app={{ include "echoserver.name" . }}" -o jsonpath="{.items[0].metadata.name}"
+kubectl exec -ti $(kubectl get pods -o name | grep -m1 {{ include $fullname }} | cut -d'/' -f 2) -- /bin/sh
+
+kubectl apply -f deployment.yaml
+kubectl get pods
+kubectl logs -f POD-NAME
+
+kubectl apply -f service.yaml
+kubectl get service
+
+
+kubectl get secrets
+kubectl describe secrets/<secret_name>
+
+kubectl create secret docker-registry <some-name> --docker-server=<docker-server-uri> --docker-username=<username> --docker-password=<pass>
+
+kubectl scale deployment <deployment-name> --replicas=1
+----
+
+== Helm
+
+[source, bash]
+----
+helm init
+helm ls --all
+
+helm repo list
+helm repo add <name> <url>
+helm repo add <name> <repo-url> --username <name> --password <password>
+
+helm search repo --devel <search-term>
+
+help pull <chart-name> --version 0.2.0-301
+
+helm update
+helm fetch <chart-name> --version 0.2.0-201
+
+helm create <chart-name>
+helm lint <chart-directory>
+helm template <chart-directory> # render the template locally, without a Tiller Server
+helm install --dry-run --debug <chart-directory>
+
+helm install --name <chart> <chart-name> --version 0.2.0-260 --dry-run --debug
+helm install --name <chart> <chart-name> --version 0.2.0-260 --debug --set global.pullSecret=<dockerkey>
+
+helm install --name <chart-name> <chart-local-path>
+helm upgrade <chart-name> <chart-local-path>
+helm delete --purge <chart-name>
+helm rollback <chart-name> 1 # rollback to previous version
+
+helm get manifest <release-name>
+
+helm package <chart-local-path>
+
+----
