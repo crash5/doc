@@ -134,3 +134,18 @@ somecommand -v -v -v -v -v
 | g /a | Cause changes to be applied over the entire event line. Used in conjunction with ‘s’, as in gs/old/new/, or with ‘&’.
 | G | Apply the following ‘s’ modifier once to each word in the event.
 |===
+
+
+== Subshell etc.
+
+[source, bash]
+----
+# command in subshell, return value
+$(ls)
+
+# read file content
+$(< file)
+
+# command output as filename
+<(ls)
+----
