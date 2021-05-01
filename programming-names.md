@@ -1,0 +1,6 @@
+- PascalCase
+- camelCase
+- snake_case
+- kebab-case
+- MACRO_CASE
+- Train-Case
