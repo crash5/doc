@@ -1,3 +1,5 @@
+Source: https://github.com/drduh/YubiKey-Guide
+
 # Generate
 
 ```bash
@@ -26,7 +28,9 @@ gpg -K
 
 gpg --armor --export-secret-keys $KEYID > $GNUPGHOME/mastersub.key
 gpg --armor --export-secret-subkeys $KEYID > $GNUPGHOME/sub.key
+
 gpg --gen-revoke $KEYID --output $GNUPGHOME/revoke.asc
+
 gpg --armor --export $KEYID | sudo tee $GNUPGHOME/gpg-$KEYID-$(date +%F).txt
 gpg --export-ssh-key $KEYID
 
@@ -40,6 +44,7 @@ gpg --card-edit
     lang
     login
     list
+    forcesig
     quit
 
 gpg --edit-key $KEYID
@@ -92,4 +97,7 @@ export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 
+# on win10 with gpg4win and git bash
+eval $(/usr/bin/ssh-pageant -r -a "/tmp/.ssh-pageant-$USERNAME")
+# ssh-add -L # list keys
 ```
