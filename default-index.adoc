@@ -14,11 +14,15 @@ include::origami.adoc[]
 
 include::other_files.adoc[]
 
+include::programming-names.md[]
+
 :leveloffset: 0
 
 == Unix
 
 :leveloffset: +2
+
+include::linux.md[]
 
 include::awk.adoc[]
 
@@ -39,3 +43,7 @@ include::tar.adoc[]
 include::vim.adoc[]
 
 include::wget.adoc[]
+
+include::ssh.md[]
+
+include::gpg.md[]
