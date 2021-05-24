@@ -3,6 +3,7 @@
 [source, bash]
 ----
 rsync -r --copy-links -e "ssh -i $(minikube ssh-key)" docker@$(minikube ip):/var/log/containers/old/* .
+----
 
 == Docker
 [source, bash]
