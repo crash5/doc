@@ -1,6 +1,8 @@
+# GPG
+
 Source: https://github.com/drduh/YubiKey-Guide
 
-# Generate
+## Generate
 
 ```bash
 export GNUPGHOME=$(mktemp -d)
@@ -60,7 +62,7 @@ gpg -K
 ```
 
 
-# Usage
+## Usage
 
 ```bash
 gpg --import /mnt/0x*txt

@@ -1,8 +1,15 @@
-# Kernel
+# Linux
+
+## Kernel
+
+```bash
 cpio -id < <initramfs>
+```
 
 
-# Systemd
+## Systemd
+
+```bash
 systemd-analyze
 systemd-analyze blame
 systemd-analyze critical-chain
@@ -49,11 +56,12 @@ wdctl
 
 systemd-cgls
 systemd-cgtop
+```
 
 
-# Recovery
+## Recovery
 
-## MBR
+### MBR
 
 4 partition limit
 32bit addr. limit (2TB)
@@ -66,43 +74,48 @@ backup: dd if=/dev/sda of=/rot/sda.mbr count=1 bs=512
 restore: dd of=/rot/sda.mbr if=/dev/sda
 
 
-## Partitioning
+### Partitioning
 
 list: `lsblk`, `blkid`
 ruin mbr: `dd if=/dev/zero of=/dev/sdb count=1 bs=512`
 
-```
+```bash
 fdisk /dev/sdb
 
 parted /dev/sdb mklabel msdos
 parted /dev/sdb print
 
 gdisk /dev/sdb
-
 ```
 
-## GUID Partition tabel - GPT
+### GUID Partition tabel - GPT
 need kernel support
 64bit addr. (2ZB)
 CRC32 chksum
 
 
-## Grub
+### Grub
 
+```bash
 grub install /dev/sdb
 grub-install hd0
 grub-install --recheck hd0
 
 mount -o remount,ro /
+```
 
 
-### Grub2
+#### Grub2
+```bash
 grub2-mkconfig -o
 grub2-script-check -v <config>
 /etc/grub.d/
+```
 
 
-# Other
+## Other
+
+```bash
 sysctl
 
 ulimit
@@ -117,9 +130,12 @@ chroot
 
 ss -ntl
 ss -l '( sport = :ssh )'
+```
 
 
-# Software Management
+## Software Management
+
+```bash
 dpkg --get-selections
 dpkg --get-selections | grep deinstall
 dpkg --get-selections | grep -w install
@@ -151,9 +167,12 @@ dpkg-architecture -L
 
 chown -R root.root packages/
 dpkg-deb  --build packages/ <targetdebname.deb>
+```
 
 
-# File access control
+## File access control
+
+```bash
 umask
 stat <fie/dir>
 
@@ -167,25 +186,30 @@ chmode g+s ...
 
 suid bit (/usr/bin/passwd)
 
-
-
 mkdir -m 770
+```
 
-## ACL
+### ACL
+
+```bash
 getfacl
 setfacl
+```
 
 
-# apparmor
+## Apparmor
 
+```bash
 capsh --print
 apparmor_status
 aa-autodep ping
 /etc/apparmor.d/
+```
 
 
-# managing file server
+## Managing file server
 
+```bash
 /etc/network/interfaces
 /etc/samba/smb.conf
 /var/log/samba/log.nmbd
@@ -221,3 +245,4 @@ testparm -sv --show-al-parameters
 
 net share
 smbclient -L
+```
