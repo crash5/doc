@@ -17,7 +17,7 @@ jobs:
     - name: Generate HTML from AsciiDoc files
       uses: docker://asciidoctor/docker-asciidoctor:latest
       with:
-        args: asciidoctor -D /github/workspace/output *.adoc
+        args: asciidoctor --destination-dir /github/workspace/output *.adoc *.md
 
     - name: Copy additional files to output dir and create index
       run: |
