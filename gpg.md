@@ -41,6 +41,7 @@ gpg --export-ssh-key $KEYID
 
 gpg --card-edit
     admin
+        kdf-setup
         passwd
     name
     lang
@@ -102,4 +103,34 @@ gpgconf --launch gpg-agent
 # on win10 with gpg4win and git bash
 eval $(/usr/bin/ssh-pageant -r -a "/tmp/.ssh-pageant-$USERNAME")
 # ssh-add -L # list keys
+
+gpgconf --kill gpg-agent
+```
+
+## Quick way
+
+```bash
+# create a template for the master key
+$ cat gen-params
+%echo Generating a basic OpenPGP key
+Key-Type: RSA
+Key-Length: 4096
+Key-Usage: cert
+Name-Real: Joe Tester
+Name-Email: joe@foo.bar
+Expire-Date: 0
+Passphrase: hey
+# Do a commit here, so that we can later print "done" :-)
+%commit
+%echo done
+
+# generate master key (only certification), save fingerprint
+gpg --batch --generate-key gen-params
+FPR=$(gpg --list-options show-only-fpr-mbox --list-secret-keys | awk '{print $1}')
+
+# generate sign, encrypt and auth subkeys
+gpg --batch --passphrase 'hey' --quick-add-key $FPR rsa4096 sign 1y
+gpg --batch --passphrase 'hey' --quick-add-key $FPR rsa4096 encrypt 1y
+gpg --batch --passphrase 'hey' --quick-add-key $FPR rsa4096 auth 1y
+
 ```
