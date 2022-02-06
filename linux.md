@@ -37,14 +37,6 @@ systemctl set-property
 systemctl list-dependencies
 systemctl list-dependencies --reverse
 
-journalctl
-journalctl -u <unit>
-journalctl -b # log begin from boot
-journalctl -e # log end
-journalctl -f
-write log to disk (binary format): mkdir -p /var/log/journal
-
-
 timedatectl
 (timedatectl set-ntp yes)
 localectl
@@ -56,6 +48,23 @@ wdctl
 
 systemd-cgls
 systemd-cgtop
+
+### journalctl
+
+    -k (dmesg)
+    -b < boot_number > (How many reboots ago 0, -1, -2, etc.)
+    -o short-precise (dmesg -T)
+    -p priority Filter by priority output (4 to filter out notice and info).
+All boot cycles : journalctl -o short-precise -k -b all
+Current boot : journalctl -o short-precise -k
+Last boot : journalctl -o short-precise -k -b -1
+Two boots prior : journalctl -o short-precise -k -b -2
+
+journalctl -u <unit>
+journalctl -b # log begin from boot
+journalctl -e # log end
+journalctl -f
+write log to disk (binary format): mkdir -p /var/log/journal
 ```
 
 
