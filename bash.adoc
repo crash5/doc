@@ -46,10 +46,11 @@ python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"
 | kbd:[CTRL + k] | kurzortól jobbra eső rész levágása
 | kbd:[CTRL + a] | sor elejére ugrás
 | kbd:[CTRL + e] | sor végére ugrás
+| kbd:[CTRL + w] | tolres a az elozo space-ig
 | kbd:[CTRL + INSERT] | vágólapra másolás
 | kbd:[SHIFT + INSERT] | vágólapról beillesztés
-| kbd:[ALT + .] | előző parancs első paraméterének behelyettesítése
-| kbd:[ALT + <NUM> + .] | előző parancs NUM-adik helyen lévő paraméterének behelyettesítése
+| kbd:[ALT + .] | előző parancs utolso paraméterének behelyettesítése
+| kbd:[ALT + <NUM> + .] | előző parancs NUM-adik helyen lévő paraméterének behelyettesítése (alt+-<NUM>, szamoza a sor vegetol)
 | kbd:[ALT + *] | a beírt wildcard-ok behelyettesítése
 | kbd:[CTRL + ALT + e] | alias, history, expansion alkalmazás a beírt parancson
 | kbd:[CTRL + x + e] | beírt parancs szerkesztése a VISUAL-ban megadott szerkesztőben
