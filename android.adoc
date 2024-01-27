@@ -1,0 +1,19 @@
+Android
+
+Install custom rom, GSI (Generic System Image)
+
+USB driver: https://developer.android.com/studio/run/win-usb
+
+adb reboot bootloader
+
+fastboot flashing unlock
+
+Reboot to fastbood:
+fastboot reboot fastboot
+
+fastboot erase system
+fastboot flash system system.img
+
+fastboot -w
+
+fastboot reboot
