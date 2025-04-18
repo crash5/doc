@@ -1,0 +1,27 @@
+ # Python
+
+- Kill all python.exe task: `taskkill /F /IM python.exe /T`
+- Use ipdb for debug: `PYTHONBREAKPOINT=ipdb.set_trace`
+- Delete pyc files: `find . -name '*.pyc' -delete`
+- upgrade all pipx package: pipx upgrade-all --include-injected
+
+
+## Get python packages and install from local folder
+
+```sh
+pip freeze > requirements.txt
+pip download -r requirements.txt -d packages/
+pip install <PKGNAME> --no-index --find-links ./packages
+```
+
+
+## Poetry
+
+```sh
+py -m pip install -U pip
+py -m pip install --user pipx
+pipx install poetry
+pipx inject poetry poetry-dynamic-versioning[plugin]
+
+pipx upgrade poetry --include-injected
+```

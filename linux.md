@@ -1,5 +1,7 @@
 # Linux
 
+- OS version: `lsb_release -a`
+
 ## Kernel
 
 ```bash

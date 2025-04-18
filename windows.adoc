@@ -2,3 +2,28 @@ Check windows licence type: `slmgr /dli` / `slmgr /dlv`
 
 Unregister licence: `slmgr /upk`
 Remove licence from registry: `slmgr /cpky`
+
+
+## WSL
+
+ ```
+wsl --list --online
+wsl --install -d Ubuntu-22.04
+wsl --setdefault Ubuntu-22.04
+```
+
+Git in WSL: https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/wsl.md
+
+ ## Expanded right click menu by default (Win11)
+
+- enable: reg add HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32 /ve /d "" /f
+- disable: reg delete HKCU\SOFTWARE\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2} /f
+
+```
+Get-ItemProperty -Path "HKCU:\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32"
+
+New-Item -Path "HKCU:\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}"
+New-Item -Path "HKCU:\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32"
+Set-ItemProperty -Path "HKCU:\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" -Name "(default)" -Value ""
+```
+

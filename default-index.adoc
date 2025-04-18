@@ -1,5 +1,7 @@
 :leveloffset: +1
 
+include::android.adoc[]
+
 include::preferred_editor_shortcuts.adoc[]
 
 include::putty_settings.adoc[]
@@ -15,6 +17,8 @@ include::origami.adoc[]
 include::other_files.adoc[]
 
 include::programming-names.md[]
+
+include::windows.md[]
 
 :leveloffset: 0
 
@@ -33,6 +37,8 @@ include::mc.adoc[]
 include::mysql.adoc[]
 
 include::patch.adoc[]
+
+include::python.adoc[]
 
 include::screen.adoc[]
 
