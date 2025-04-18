@@ -1,0 +1,3057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Imre Nagy">
+<title>Docs and tips collection</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>Docs and tips collection</h1>
+<div class="details">
+<span id="author" class="author">Imre Nagy</span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_preferred_editor_shortcuts">Preferred Editor Shortcuts</a>
+<ul class="sectlevel2">
+<li><a href="#_windows">Windows</a></li>
+</ul>
+</li>
+<li><a href="#_putty_settings">Putty Settings</a></li>
+<li><a href="#_telefonközpont_menü_kezelés_tárcsázással">Telefonközpont-menü kezelés tárcsázással</a></li>
+<li><a href="#_utp_kábel_bekötés">UTP kábel bekötés</a></li>
+<li><a href="#_recipe">Recipe</a>
+<ul class="sectlevel2">
+<li><a href="#_vodka_kocka">Vodka kocka</a></li>
+<li><a href="#_kakaós_süti_a_mikróból">Kakaós süti, a mikróból</a></li>
+<li><a href="#_chips">Chips</a></li>
+<li><a href="#_pincepörkölt">Pincepörkölt</a></li>
+<li><a href="#_a_málé">A málé</a></li>
+</ul>
+</li>
+<li><a href="#_origami">Origami</a></li>
+<li><a href="#_other_files">Other files</a></li>
+<li><a href="#_unix">Unix</a>
+<ul class="sectlevel2">
+<li><a href="#_linux">Linux</a></li>
+<li><a href="#_awk">AWK</a></li>
+<li><a href="#_bash">Bash</a></li>
+<li><a href="#_midnight_commander">Midnight Commander</a></li>
+<li><a href="#_mysql">MySQL</a></li>
+<li><a href="#_patch">Patch</a></li>
+<li><a href="#_screen">Screen</a></li>
+<li><a href="#_sed">SED</a></li>
+<li><a href="#_tar">TAR</a></li>
+<li><a href="#_vim">vim</a></li>
+<li><a href="#_wget">Wget</a></li>
+<li><a href="#_ssh">SSH</a></li>
+<li><a href="#_gpg">GPG</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Android</p>
+</div>
+<div class="paragraph">
+<p>Install custom rom, GSI (Generic System Image)</p>
+</div>
+<div class="paragraph">
+<p>USB driver: <a href="https://developer.android.com/studio/run/win-usb" class="bare">https://developer.android.com/studio/run/win-usb</a></p>
+</div>
+<div class="paragraph">
+<p>adb reboot bootloader</p>
+</div>
+<div class="paragraph">
+<p>fastboot flashing unlock</p>
+</div>
+<div class="paragraph">
+<p>Reboot to fastbood:
+fastboot reboot fastboot</p>
+</div>
+<div class="paragraph">
+<p>fastboot erase system
+fastboot flash system system.img</p>
+</div>
+<div class="paragraph">
+<p>fastboot -w</p>
+</div>
+<div class="paragraph">
+<p>fastboot reboot</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_preferred_editor_shortcuts"><a class="anchor" href="#_preferred_editor_shortcuts"></a><a class="link" href="#_preferred_editor_shortcuts">Preferred Editor Shortcuts</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_windows"><a class="anchor" href="#_windows"></a><a class="link" href="#_windows">Windows</a></h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Shortcut</th>
+<th class="tableblock halign-left valign-top">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Duplicate selection</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Save all</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Save as</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>\</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Toggle comment</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Shift</kbd>+<kbd>Del</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cut line</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Up</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Move line up</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Down</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Move line down</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Right</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Expand selection</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Left</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shrink selection</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Alt</kbd>+<kbd>Left</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Previous cursor position</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Alt</kbd>+<kbd>Right</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nex cursor position</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Paste from multi clipboard</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Convert to uppercase</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Convert to lowercase</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>F4</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Toggle header/source in other window</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>F4</kbd></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Toggle header/source</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>Ctrl</kbd>+<kbd>F2</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Follow symbol in other window</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>F2</kbd></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Follow symbol</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_putty_settings"><a class="anchor" href="#_putty_settings"></a><a class="link" href="#_putty_settings">Putty Settings</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<div class="title"><b class="menuref">Session</b></div>
+<ul>
+<li>
+<p>Connection type: <code>SSH</code></p>
+</li>
+<li>
+<p>Close window on exit: <code>Never</code></p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title"><span class="menuseq"><b class="menu">Terminal</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">Features</b></span></div>
+<ul>
+<li>
+<p>Disable Application keypad mode <code>+</code></p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title"><span class="menuseq"><b class="menu">Terminal</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">Bell</b></span></div>
+<ul>
+<li>
+<p>Action to happen when a bell occurs: <code>Visual bell (flash window)</code></p>
+</li>
+<li>
+<p>Taskbar/caption indication: <code>Flashing</code></p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title"><b class="menuref">Window</b></div>
+<ul>
+<li>
+<p>Lines of scrollback: <code>20000</code></p>
+</li>
+<li>
+<p>Reset scrollback on keypress <code>+</code></p>
+</li>
+<li>
+<p>Reset scrollback on display activity <code>-</code></p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title"><span class="menuseq"><b class="menu">Window</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">Appearance</b></span></div>
+<ul>
+<li>
+<p>Font: <code>Lucida Console, 9-point</code></p>
+</li>
+<li>
+<p>Font quality: <code>ClearType</code></p>
+</li>
+<li>
+<p>Gap between text and window edge: <code>3</code></p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title"><span class="menuseq"><b class="menu">Window</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">Behaviour</b></span></div>
+<ul>
+<li>
+<p>Window closes on ALT-F4 <code>+</code></p>
+</li>
+<li>
+<p>System menu appears on ALT alone <code>+</code></p>
+</li>
+<li>
+<p>Full screen on Alt-Enter <code>+</code></p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title"><span class="menuseq"><b class="menu">Window</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">Translation</b></span></div>
+<ul>
+<li>
+<p>Character set: <code>UTF-8</code></p>
+</li>
+<li>
+<p>Handling of line drawing characters: <code>Unicode</code></p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title"><span class="menuseq"><b class="menu">Window</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">Selection</b></span></div>
+<ul>
+<li>
+<p>Action of mouse buttons: <code>xterm (Right extends, Middle pastes)</code></p>
+</li>
+<li>
+<p>Paste to clipboard in RTF as well as plain text <code>+</code></p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. <span class="menuseq"><b class="menu">Window</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">Colours</b></span></caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Red</th>
+<th class="tableblock halign-left valign-top">Green</th>
+<th class="tableblock halign-left valign-top">Blue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ANSI Blue</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">74</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">74</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">255</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ANSI Blue Bold</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">140</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">140</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">255</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<div class="title"><b class="menuref">Connection</b></div>
+<ul>
+<li>
+<p>Seconds between keepalives (0 to turn off): 25</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title"><span class="menuseq"><b class="menu">Connection</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">SSH</b></span></div>
+<ul>
+<li>
+<p>Enable compression <code>+</code></p>
+</li>
+<li>
+<p>Preferred SSH protocol version: <code>2 only</code></p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title"><span class="menuseq"><b class="menu">Connection</b>&#160;<b class="caret">&#8250;</b> <b class="submenu">SSH</b>&#160;<b class="caret">&#8250;</b> <b class="menuitem">X11</b></span></div>
+<ul>
+<li>
+<p>Enable X11 forwarding <code>+</code></p>
+</li>
+</ul>
+</div>
+<hr>
+<div class="paragraph">
+<p>Original Source: <a href="http://dag.wieers.com/blog/improving-putty-settings-on-windows" class="bare">http://dag.wieers.com/blog/improving-putty-settings-on-windows</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_telefonközpont_menü_kezelés_tárcsázással"><a class="anchor" href="#_telefonközpont_menü_kezelés_tárcsázással"></a><a class="link" href="#_telefonközpont_menü_kezelés_tárcsázással">Telefonközpont-menü kezelés tárcsázással</a></h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">IVR</dt>
+<dd>
+<p>Interactive Voice Response</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Adott karakter automatikus küldése a hívott félnek: <code>Telefonszám+kontroll karakter+szám</code></p>
+</div>
+<div class="paragraph">
+<p>Pl. kapcsolás után vár 2 mp-et, elküldi az 1-est, vár 2*2 másodpercet, elküldi a 4-est.:<br>
+<code>+36205554444,1,,4</code></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Kód</th>
+<th class="tableblock halign-left valign-top">Jelentés</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">, (colon)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vár 2 másodpercet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">; (semicolon)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">feldob egy ablakot, gombnyomásra megy tovább</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_utp_kábel_bekötés"><a class="anchor" href="#_utp_kábel_bekötés"></a><a class="link" href="#_utp_kábel_bekötés">UTP kábel bekötés</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Blankolás</strong>: 15/12 mm</p>
+</div>
+<div class="paragraph">
+<p>Ha lefelé álló pöcökkel bedugod (feléd áll ki a dugóból a kábel), akkor balról kezdődnek a színek. A színek bekötési sorrendje a <a href="https://en.wikipedia.org/wiki/TIA/EIA-568">TIA/EIA-568|TIA/EIA-568B</a> szabvány szerint értendő.</p>
+</div>
+<div class="paragraph">
+<p>Egyenes: B-B<br>
+Kereszt: A-B</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">A</dt>
+<dd>
+<p>ZF, Z, NF, K, KF, N, BF, B</p>
+</dd>
+<dt class="hdlist1">B</dt>
+<dd>
+<p>NF, N, ZF, K, KF, Z, BF, B</p>
+</dd>
+</dl>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Rövidítés</th>
+<th class="tableblock halign-left valign-top">Szín</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Narancs-fehér</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Narancs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ZF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zöld-fehér</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">K</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kék</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kék-fehér</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zöld</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Barna-fehér</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Barna</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_recipe"><a class="anchor" href="#_recipe"></a><a class="link" href="#_recipe">Recipe</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_vodka_kocka"><a class="anchor" href="#_vodka_kocka"></a><a class="link" href="#_vodka_kocka">Vodka kocka</a></h3>
+<div class="paragraph">
+<p><strong>Hozzávalók</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>2 zacskó tortazselé/aszpik</p>
+</li>
+<li>
+<p>fél liter vodka</p>
+</li>
+<li>
+<p>2 evőkanál cukor</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Elkészítjük a zselét (a zacskó hátulján rajta van, hogyan kell), de az előírtnál 20%-al kevesebb folyadékkal. Amikor készen van, egy téglalap alakú edénybe töltjük, de jégkockatartókba is lehet. A cukrot elkeverjük benne, majd 2-5 percet állni hagyjuk, míg le nem hül, de még nem dermed meg. Ekkor adjuk hozzá a vodkát és óvatosan elkeverjük, hűtőbe rakjuk. Megdermedés után 2x2cm-es kockákra vágjuk föl és mignon-os papíron tálaljuk.</p>
+</div>
+<div class="paragraph">
+<p>FIGYELEM: 3-4 kocka = feles!</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kakaós_süti_a_mikróból"><a class="anchor" href="#_kakaós_süti_a_mikróból"></a><a class="link" href="#_kakaós_süti_a_mikróból">Kakaós süti, a mikróból</a></h3>
+<div class="paragraph">
+<p><strong>Hozzávalók</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>4 evőkanál liszt</p>
+</li>
+<li>
+<p>4 evőkanál cukor</p>
+</li>
+<li>
+<p>2 evőkanál kakaó</p>
+</li>
+<li>
+<p>1 (teljes)tojás</p>
+</li>
+<li>
+<p>3 evőkanál tej</p>
+</li>
+<li>
+<p>3 evőkanál olaj</p>
+</li>
+<li>
+<p>forma amiben beteszed a mikróba</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A 4 ek. lisztet és a 2 ek. kakaót összekevered. Ezalatt a tojással a 4 ek. cukrot összekutyulod.
+Ha a tojásos cukros massza már szépen összeállt, akkor azt hozzáöntöd a kakaós liszthez.
+Ezt ismét összekevered. Utána megy hozzá a 3 ek. tej, majd a 3 ek. olaj, és az egészet csomómentesre kevered.
+Ezt már be is teheted sütni, vagy valamibe beleöntöd(bögre, műzlistál, műanyagforma, mindegy, csak bírja a mikrohullámú sütőt).
+A sütés, az 3 perc, 1000W-on (max fokozat általában). Készüléke válogatja, hogy ez hány Watt, de figyelni kell hogy dagad,
+és ha már nem dagad tovább, akkor már nem kell sokáig maradnia a mikróban.
+Sütés közben, körülbelül a másfélszeresére dagad&#8230;&#8203; ezzel számoljatok.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_chips"><a class="anchor" href="#_chips"></a><a class="link" href="#_chips">Chips</a></h3>
+<div class="sect3">
+<h4 id="_kukorica_chips"><a class="anchor" href="#_kukorica_chips"></a><a class="link" href="#_kukorica_chips">Kukorica chips</a></h4>
+<div class="paragraph">
+<p><strong>Hozzávalók</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>2 csésze (1,5 dl) előfőzött kukoricaliszt (kukoricalepény liszt néven kapható)</p>
+</li>
+<li>
+<p>1 csésze víz</p>
+</li>
+<li>
+<p>1/4 csésze olvasztott margarin</p>
+</li>
+<li>
+<p>1 mokkáskanál só</p>
+</li>
+<li>
+<p>5 mokkáskanál parmezán sajt</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A sütőt beállítom 170 °C-ra.<br>
+A hozzávalókat összegyúrom, és két lap sütőpapír közt 1,5 mm vastagra nyújtom. Fontos az egyenletes tésztavastagság, hogy mindenütt egyformán süljön át. A megadott mennyiséget egy normál méretű tepsi hátán 2 adagban lehet megsütni.
+Ha kész, a felső papírt óvatosan lehúzom róla, és az alsó papírral átcsúsztatom a tepsi hátára. Ott egy éles késsel tetszőleges darabokra vágom. (Nekünk a 4 cm oldalélű négyzet nagyon bevált.)  Betolom a már meleg sütőbe és légkeveréses üzemmódban 16-17 percig sütöm. Akkor jó, ha a teteje pici aranybarna színt kap. Ha hamar kiszedjük, rágós, ha későn, nagyon sült ízű lesz.
+Ha a darabok összesültek, egyszerűen széttördelem, és egy tányérra rakom. Ha több menetben készül, ugyan az a sütőpapírpár többször is felhasználható.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_burgonyachips_light"><a class="anchor" href="#_burgonyachips_light"></a><a class="link" href="#_burgonyachips_light">Burgonyachips light</a></h4>
+<div class="paragraph">
+<p><strong>Hozzávalók</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>3 nagy burgonya</p>
+</li>
+<li>
+<p>kevés olaj</p>
+</li>
+<li>
+<p>só</p>
+</li>
+<li>
+<p>provence-i fűszerkeverék (vagy tetszés szerinti más fűszer)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Meghámozzuk a burgonyákat, majd nagyon vékonyra szeleteljük. Ezután langyos vízzel leöblítjük, majd alaposan megszárítjuk. A burgonyaszeleteket egy tányérra rakjuk, olajba mártott ecsettel megkenjük, meghintjük a fűszerrel, majd megfordítjuk, és a másik oldalon is elvégezzük a műveletet. A mikrohullámú sütőt 850 Wattra állítjuk, és 4-5 percig sütjük a burgonyát. Ha ennyi idő kevésnek bizonyulna, még 1-2 perccel lehet tovább sütni.</p>
+</div>
+<div class="paragraph">
+<p>Előkészítés: 10 perc<br>
+Sütés: 5 perc</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pincepörkölt"><a class="anchor" href="#_pincepörkölt"></a><a class="link" href="#_pincepörkölt">Pincepörkölt</a></h3>
+<div class="paragraph">
+<p><strong>Hozzávalók</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>10 dkg zsír</p>
+</li>
+<li>
+<p>1 kg marhahús</p>
+</li>
+<li>
+<p>1 kg sertésdagadó vagy lapocka</p>
+</li>
+<li>
+<p>20 dkg füstöltsonka</p>
+</li>
+<li>
+<p>40 dkg vöröshagyma</p>
+</li>
+<li>
+<p>4-5 gerezd fokhagyma</p>
+</li>
+<li>
+<p>kis tubus pirosarany</p>
+</li>
+<li>
+<p>3 evőkanál pirospaprika</p>
+</li>
+<li>
+<p>3 db hegyes, erős zöldpaprika</p>
+</li>
+<li>
+<p>2 db paradicsom</p>
+</li>
+<li>
+<p>2 dl vörösbor</p>
+</li>
+<li>
+<p>só, bors, ízlés szerint</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Borbás Marcsi tudja, hogy az alapszabály mindenhol ugyanaz: ahogy a jó borhoz elengedhetetlen a jó hordó, úgy a jó pincepörkölt csak bográcsban készülhet. Mégis, ha megkívánja, egyszerűen otthon lábasban is elkészíti. Ezúttal a balatonrendesiek receptjét választotta, mert nagyon egyszerű, szinte lehetetlen elrontani, ha jó minőségűek az alapanyagok.</p>
+</div>
+<div class="paragraph">
+<p>A pincepörkölt általában kétféle húsból készül. Marhából lehetőleg lábszárat használjunk, sertésből pedig dagadót és lapockát. A fűszerek mellett a házi füstölt szalonna is nagy szerepet játszik. Ha nincs, az sem baj: bármilyen füstölt hús megteszi, amelyik nem csontos. A siker titka a húsok rétegezése. Fontos, hogy jóféle húsokat vegyünk, Marcsi szürke marhából és mangalicából szokta főzni a pincepörköltet. Előkészítésként a húsokat nagyjából egyforma falatnyi kockákra vágja, a vöröshagymát és a szalonnát pedig apróra. A pincepörköltnél nem szükséges előre megpirítani a hagymát, mert rétegesen rakjuk a húsok közé. Amikor a hozzávalókat a bográcsba, vagy a lábosba rakosgatja, legalulra kerül a szalonna, erre a hagyma fele, aztán a marhahús jön, erre a többi hagyma, arra a sertéshús. Ezután tetejére a só, a fokhagyma és végül a csípős zöldpaprika és a cikkekre vágott paradicsom. Mielőtt felteszi főni, felönti annyi vízzel, hogy éppen csak ellepje a húst. Amikor már rotyog és kezdi elfőni a levét, jóféle borocskát önt rá. Az őrölt pirospaprikát csak a vége felé, amikor már majdnem puha a hús, akkor adja hozzá. Ha kiadósabbra, bővebb szafttal készíti, akkor, amíg főnek a húsok, meghámoz fejenként egy-két krumplit, felvágja és a lábas (vagy bogrács) tetején szépen elrendezi a hasábokat. Még húsz percig főzi kislángon, és már készen is van. Azt tanácsolja, hogy friss, ropogós, saját készítésű fehér kenyérrel fogyasszuk. Az igazi pincepörkölthöz persze egy kis éneklés is kell, attól csak jobban esik az étel.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_a_málé"><a class="anchor" href="#_a_málé"></a><a class="link" href="#_a_málé">A málé</a></h3>
+<div class="paragraph">
+<p><strong>Hozzávalók</strong> (egy tepsihez)</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>50 dkg kukoricaliszt</p>
+</li>
+<li>
+<p>forró víz</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Leginkább csak hallomásból ismert, lassan feledésbe merülő népi ételünk a málé, amit a háziasszonyok évszázadokon át készítettek. A málé elnevezés a legelterjedtebb, de vidékenként más neveken is ismeretes.
+Tésztáját is változatosan készítik, ahány vidék, annyiféle málé. Van ahol a kukoricaliszt helyett búza-, vagy hajdinalisztből sütik, tésztájába még tököt, almát is kevernek. Az ízletes, édeskés lepény kedvelt reggeli vagy uzsonna lehet. Lekvárral leöntve, töltve, gyümölccsel tálalva egészséges finomság, amit a gyerekek is szívesen majszolnak.</p>
+</div>
+<div class="paragraph">
+<p>Egy tálba öntött kukoricalisztbe apránként keverjünk forró vizet addig, míg galuskasűrűségű tésztamasszát kapunk. Ekkor a tálat letakarjuk, és legalább 6-8 órán át meleg helyen pihentetjük. Egy, a gáz- vagy villanysütőhöz járó, lapos tepsit, vagy két kisebb peremes tepsit kivajazunk, és beleöntjük a tésztát. Elsimítjuk a tetejét, és 20-30 perc alatt közepesen meleg sütőben megsütjük a málét. Akkor jó, ha a széle kissé megpirul. Tűpróbával ellenőrizhetjük, hogy átsült-e a közepe is, Ha kihűlt, tetszés szerint felszeleteljük.
+Azért fontos, hogy betartsuk a pihentetési időt, mert az alatt a kukoricaliszt keményítőtartalma részben átalakul, lebomlik cukorrá, ettől lesz édes a málé.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_origami"><a class="anchor" href="#_origami"></a><a class="link" href="#_origami">Origami</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="images/origami/basket.jpg" target="_blank" rel="noopener">Basket</a></p>
+</li>
+<li>
+<p><a href="images/origami/envelope.jpg" target="_blank" rel="noopener">Envelope</a></p>
+</li>
+<li>
+<p><a href="images/origami/envelope2.jpg" target="_blank" rel="noopener">Envelope 2</a></p>
+</li>
+<li>
+<p><a href="images/origami/rectangle_box.jpg" target="_blank" rel="noopener">Rectangle box</a></p>
+</li>
+<li>
+<p><a href="images/origami/rectangle_box2.jpg" target="_blank" rel="noopener">Rectangle box 2</a></p>
+</li>
+<li>
+<p><a href="images/origami/square_box.jpg" target="_blank" rel="noopener">Square box</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_other_files"><a class="anchor" href="#_other_files"></a><a class="link" href="#_other_files">Other files</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="files/alapvetoismeretek-matematika.doc" target="_blank" rel="noopener">Alapvető ismeretek - Matematika (doc)</a></p>
+</li>
+<li>
+<p><a href="files/HonvedelmiIsmeretek_zsebkonyv.doc" target="_blank" rel="noopener">Honvédelmi Ismeretek zsebkönyv (doc)</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>PascalCase</p>
+</li>
+<li>
+<p>camelCase</p>
+</li>
+<li>
+<p>snake_case</p>
+</li>
+<li>
+<p>kebab-case</p>
+</li>
+<li>
+<p>MACRO_CASE</p>
+</li>
+<li>
+<p>Train-Case</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Unresolved directive in default-index.adoc - include::windows.md[]</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unix"><a class="anchor" href="#_unix"></a><a class="link" href="#_unix">Unix</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_linux"><a class="anchor" href="#_linux"></a><a class="link" href="#_linux">Linux</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>OS version: <code>lsb_release -a</code></p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_kernel"><a class="anchor" href="#_kernel"></a><a class="link" href="#_kernel">Kernel</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">cpio -id &lt; &lt;initramfs&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_systemd"><a class="anchor" href="#_systemd"></a><a class="link" href="#_systemd">Systemd</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">systemd-analyze
+systemd-analyze blame
+systemd-analyze critical-chain
+systemd-analyze plot &gt; boot.svg
+
+
+systemctl isolate &lt;multi-user.target&gt;
+systemctl get-default
+systemctl set-default &lt;multi-user.target&gt;
+runlevel
+systemctl reboot
+
+
+systemctl enable/disable/start/stop/mask/unmask
+systemctl status
+systemctl list-unit-files
+systemctl list-units
+systemctl list-units --type service --state running
+systemctl edit &lt;service&gt;
+systemctl edit --full
+systemctl --failed --all
+systemctl set-property
+(ip accounting, ipaddressallow.../devicepolicy, deviceallow)
+
+systemctl list-dependencies
+systemctl list-dependencies --reverse
+
+timedatectl
+(timedatectl set-ntp yes)
+localectl
+loginctl
+hostnamectl
+networkctl
+keyctl
+wdctl
+
+systemd-cgls
+systemd-cgtop
+
+### journalctl
+
+    -k (dmesg)
+    -b &lt; boot_number &gt; (How many reboots ago 0, -1, -2, etc.)
+    -o short-precise (dmesg -T)
+    -p priority Filter by priority output (4 to filter out notice and info).
+All boot cycles : journalctl -o short-precise -k -b all
+Current boot : journalctl -o short-precise -k
+Last boot : journalctl -o short-precise -k -b -1
+Two boots prior : journalctl -o short-precise -k -b -2
+
+journalctl -u &lt;unit&gt;
+journalctl -b # log begin from boot
+journalctl -e # log end
+journalctl -f
+write log to disk (binary format): mkdir -p /var/log/journal</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_recovery"><a class="anchor" href="#_recovery"></a><a class="link" href="#_recovery">Recovery</a></h4>
+<div class="sect4">
+<h5 id="_mbr"><a class="anchor" href="#_mbr"></a><a class="link" href="#_mbr">MBR</a></h5>
+<div class="paragraph">
+<p>4 partition limit
+32bit addr. limit (2TB)</p>
+</div>
+<div class="paragraph">
+<p>extended logical partiton use links, if a link broken lose all&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Sentinel 2bytes '0xAA55' bootable</p>
+</div>
+<div class="paragraph">
+<p>backup: dd if=/dev/sda of=/rot/sda.mbr count=1 bs=512
+restore: dd of=/rot/sda.mbr if=/dev/sda</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_partitioning"><a class="anchor" href="#_partitioning"></a><a class="link" href="#_partitioning">Partitioning</a></h5>
+<div class="paragraph">
+<p>list: <code>lsblk</code>, <code>blkid</code>
+ruin mbr: <code>dd if=/dev/zero of=/dev/sdb count=1 bs=512</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">fdisk /dev/sdb
+
+parted /dev/sdb mklabel msdos
+parted /dev/sdb print
+
+gdisk /dev/sdb</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_guid_partition_tabel_gpt"><a class="anchor" href="#_guid_partition_tabel_gpt"></a><a class="link" href="#_guid_partition_tabel_gpt">GUID Partition tabel - GPT</a></h5>
+<div class="paragraph">
+<p>need kernel support
+64bit addr. (2ZB)
+CRC32 chksum</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_grub"><a class="anchor" href="#_grub"></a><a class="link" href="#_grub">Grub</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">grub install /dev/sdb
+grub-install hd0
+grub-install --recheck hd0
+
+mount -o remount,ro /</code></pre>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_grub2"><a class="anchor" href="#_grub2"></a><a class="link" href="#_grub2">Grub2</a></h6>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">grub2-mkconfig -o
+grub2-script-check -v &lt;config&gt;
+/etc/grub.d/</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_other"><a class="anchor" href="#_other"></a><a class="link" href="#_other">Other</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">sysctl
+
+ulimit
+ulimit -a
+ulimit -Hu
+ulimit -Su
+ulimit -u 3000
+/etc/security/limits.conf
+
+chroot
+    ldd /bin/bash
+
+ss -ntl
+ss -l '( sport = :ssh )'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_software_management"><a class="anchor" href="#_software_management"></a><a class="link" href="#_software_management">Software Management</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">dpkg --get-selections
+dpkg --get-selections | grep deinstall
+dpkg --get-selections | grep -w install
+dpkg --purge $(dpkg --get-selections | grep deinstall | cut -f1)
+
+
+dpkg-reconfigure debconf # set to ask for everything
+dpkg-reconfigure tzdata
+add-apt-repository &lt;&lt;ppa&gt;
+
+DEBIAN_PRIORITY=low
+
+
+dpkg -l vim
+dpkg -L vim
+dpkg -S /usr/bin/vim.basic
+
+dpkg -i prog.deb
+/var/cache/apt/archives
+apt clean
+
+apt show nginx
+apt search apache
+search in name: aptitude search ~nApache
+search in description: aptitude search ~dApache
+
+dpkg-architecture -L
+
+
+chown -R root.root packages/
+dpkg-deb  --build packages/ &lt;targetdebname.deb&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_file_access_control"><a class="anchor" href="#_file_access_control"></a><a class="link" href="#_file_access_control">File access control</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">umask
+stat &lt;fie/dir&gt;
+
+sticky bit (/tmp,...)
+chmod o+t
+chmod 1777
+
+sgid bit (apache docroot)
+chgrp apache /var/www/html
+chmode g+s ...
+
+suid bit (/usr/bin/passwd)
+
+mkdir -m 770</code></pre>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_acl"><a class="anchor" href="#_acl"></a><a class="link" href="#_acl">ACL</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">getfacl
+setfacl</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_apparmor"><a class="anchor" href="#_apparmor"></a><a class="link" href="#_apparmor">Apparmor</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">capsh --print
+apparmor_status
+aa-autodep ping
+/etc/apparmor.d/</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_managing_file_server"><a class="anchor" href="#_managing_file_server"></a><a class="link" href="#_managing_file_server">Managing file server</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">/etc/network/interfaces
+/etc/samba/smb.conf
+/var/log/samba/log.nmbd
+
+net rpc services list -U root
+
+dpkg-reconfigure openssh-server
+ssh-keygen -R &lt;ip&gt;
+
+apt install samba winbind?
+
+ss -ntl
+ss -tl
+grep -Ew '(139|445)/tcp' /etc/services
+smbdr/nmbd/winbind -.service
+
+pdbedit --create root
+prinft "%s\n%s\n" pass1 pass1 | sudo pdbedit -a -t &lt;username&gt;
+pdbedit --list
+    -w -v -u
+
+pdbedit -P "masimum password age"
+pdbedit -P ""
+
+nmblookup samba
+smbstatus -V
+smbstatus -b
+
+grep -FB2 'passdb backend' smb.conf
+
+testparm -s
+testparm -sv --show-al-parameters
+
+net share
+smbclient -L</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_awk"><a class="anchor" href="#_awk"></a><a class="link" href="#_awk">AWK</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">HANDY ONE-LINERS FOR AWK                                  22 July 2003
+compiled by Eric Pement &lt;pemente@northpark.edu&gt;           version 0.22
+   Latest version of this file is usually at:
+   http://www.student.northpark.edu/pemente/awk/awk1line.txt
+
+
+USAGE:
+
+    Unix:  awk '/pattern/ {print "$1"}'    # standard Unix shells
+ DOS/Win:  awk '/pattern/ {print "$1"}'    # okay for DJGPP compiled
+           awk "/pattern/ {print \"$1\"}"  # required for Mingw32
+
+Most of my experience comes from version of GNU awk (gawk) compiled for
+Win32. Note in particular that DJGPP compilations permit the awk script
+to follow Unix quoting syntax '/like/ {"this"}'. However, the user must
+know that single quotes under DOS/Windows do not protect the redirection
+arrows (&lt;, &gt;) nor do they protect pipes (|). Both are special symbols
+for the DOS/CMD command shell and their special meaning is ignored only
+if they are placed within "double quotes." Likewise, DOS/Win users must
+remember that the percent sign (%) is used to mark DOS/Win environment
+variables, so it must be doubled (%%) to yield a single percent sign
+visible to awk.
+
+If I am sure that a script will NOT need to be quoted in Unix, DOS, or
+CMD, then I normally omit the quote marks. If an example is peculiar to
+GNU awk, the command 'gawk' will be used. Please notify me if you find
+errors or new commands to add to this list (total length under 65
+characters). I usually try to put the shortest script first.
+
+FILE SPACING:
+
+ # double space a file
+ awk '1;{print ""}'
+ awk 'BEGIN{ORS="\n\n"};1'
+
+ # double space a file which already has blank lines in it. Output file
+ # should contain no more than one blank line between lines of text.
+ # NOTE: On Unix systems, DOS lines which have only CRLF (\r\n) are
+ # often treated as non-blank, and thus 'NF' alone will return TRUE.
+ awk 'NF{print $0 "\n"}'
+
+ # triple space a file
+ awk '1;{print "\n"}'
+
+NUMBERING AND CALCULATIONS:
+
+ # precede each line by its line number FOR THAT FILE (left alignment).
+ # Using a tab (\t) instead of space will preserve margins.
+ awk '{print FNR "\t" $0}' files*
+
+ # precede each line by its line number FOR ALL FILES TOGETHER, with tab.
+ awk '{print NR "\t" $0}' files*
+
+ # number each line of a file (number on left, right-aligned)
+ # Double the percent signs if typing from the DOS command prompt.
+ awk '{printf("%5d : %s\n", NR,$0)}'
+
+ # number each line of file, but only print numbers if line is not blank
+ # Remember caveats about Unix treatment of \r (mentioned above)
+ awk 'NF{$0=++a " :" $0};{print}'
+ awk '{print (NF? ++a " :" :"") $0}'
+
+ # count lines (emulates "wc -l")
+ awk 'END{print NR}'
+
+ # print the sums of the fields of every line
+ awk '{s=0; for (i=1; i&lt;=NF; i++) s=s+$i; print s}'
+
+ # add all fields in all lines and print the sum
+ awk '{for (i=1; i&lt;=NF; i++) s=s+$i}; END{print s}'
+
+ # print every line after replacing each field with its absolute value
+ awk '{for (i=1; i&lt;=NF; i++) if ($i &lt; 0) $i = -$i; print }'
+ awk '{for (i=1; i&lt;=NF; i++) $i = ($i &lt; 0) ? -$i : $i; print }'
+
+ # print the total number of fields ("words") in all lines
+ awk '{ total = total + NF }; END {print total}' file
+
+ # print the total number of lines that contain "Beth"
+ awk '/Beth/{n++}; END {print n+0}' file
+
+ # print the largest first field and the line that contains it
+ # Intended for finding the longest string in field #1
+ awk '$1 &gt; max {max=$1; maxline=$0}; END{ print max, maxline}'
+
+ # print the number of fields in each line, followed by the line
+ awk '{ print NF ":" $0 } '
+
+ # print the last field of each line
+ awk '{ print $NF }'
+
+ # print the last field of the last line
+ awk '{ field = $NF }; END{ print field }'
+
+ # print every line with more than 4 fields
+ awk 'NF &gt; 4'
+
+ # print every line where the value of the last field is &gt; 4
+ awk '$NF &gt; 4'
+
+
+TEXT CONVERSION AND SUBSTITUTION:
+
+ # IN UNIX ENVIRONMENT: convert DOS newlines (CR/LF) to Unix format
+ awk '{sub(/\r$/,"");print}'   # assumes EACH line ends with Ctrl-M
+
+ # IN UNIX ENVIRONMENT: convert Unix newlines (LF) to DOS format
+ awk '{sub(/$/,"\r");print}
+
+ # IN DOS ENVIRONMENT: convert Unix newlines (LF) to DOS format
+ awk 1
+
+ # IN DOS ENVIRONMENT: convert DOS newlines (CR/LF) to Unix format
+ # Cannot be done with DOS versions of awk, other than gawk:
+ gawk -v BINMODE="w" '1' infile &gt;outfile
+
+ # Use "tr" instead.
+ tr -d \r &lt;infile &gt;outfile            # GNU tr version 1.22 or higher
+
+ # delete leading whitespace (spaces, tabs) from front of each line
+ # aligns all text flush left
+ awk '{sub(/^[ \t]+/, ""); print}'
+
+ # delete trailing whitespace (spaces, tabs) from end of each line
+ awk '{sub(/[ \t]+$/, "");print}'
+
+ # delete BOTH leading and trailing whitespace from each line
+ awk '{gsub(/^[ \t]+|[ \t]+$/,"");print}'
+ awk '{$1=$1;print}'           # also removes extra space between fields
+
+ # insert 5 blank spaces at beginning of each line (make page offset)
+ awk '{sub(/^/, "     ");print}'
+
+ # align all text flush right on a 79-column width
+ awk '{printf "%79s\n", $0}' file*
+
+ # center all text on a 79-character width
+ awk '{l=length();s=int((79-l)/2); printf "%"(s+l)"s\n",$0}' file*
+
+ # substitute (find and replace) "foo" with "bar" on each line
+ awk '{sub(/foo/,"bar");print}'           # replaces only 1st instance
+ gawk '{$0=gensub(/foo/,"bar",4);print}'  # replaces only 4th instance
+ awk '{gsub(/foo/,"bar");print}'          # replaces ALL instances in a line
+
+ # substitute "foo" with "bar" ONLY for lines which contain "baz"
+ awk '/baz/{gsub(/foo/, "bar")};{print}'
+
+ # substitute "foo" with "bar" EXCEPT for lines which contain "baz"
+ awk '!/baz/{gsub(/foo/, "bar")};{print}'
+
+ # change "scarlet" or "ruby" or "puce" to "red"
+ awk '{gsub(/scarlet|ruby|puce/, "red"); print}'
+
+ # reverse order of lines (emulates "tac")
+ awk '{a[i++]=$0} END {for (j=i-1; j&gt;=0;) print a[j--] }' file*
+
+ # if a line ends with a backslash, append the next line to it
+ # (fails if there are multiple lines ending with backslash...)
+ awk '/\\$/ {sub(/\\$/,""); getline t; print $0 t; next}; 1' file*
+
+ # print and sort the login names of all users
+ awk -F ":" '{ print $1 | "sort" }' /etc/passwd
+
+ # print the first 2 fields, in opposite order, of every line
+ awk '{print $2, $1}' file
+
+ # switch the first 2 fields of every line
+ awk '{temp = $1; $1 = $2; $2 = temp}' file
+
+ # print every line, deleting the second field of that line
+ awk '{ $2 = ""; print }'
+
+ # print in reverse order the fields of every line
+ awk '{for (i=NF; i&gt;0; i--) printf("%s ",i);printf ("\n")}' file
+
+ # remove duplicate, consecutive lines (emulates "uniq")
+ awk 'a !~ $0; {a=$0}'
+
+ # remove duplicate, nonconsecutive lines
+ awk '! a[$0]++'                     # most concise script
+ awk '!($0 in a) {a[$0];print}'      # most efficient script
+
+ # concatenate every 5 lines of input, using a comma separator
+ # between fields
+ awk 'ORS=%NR%5?",":"\n"' file
+
+
+
+SELECTIVE PRINTING OF CERTAIN LINES:
+
+ # print first 10 lines of file (emulates behavior of "head")
+ awk 'NR &lt; 11'
+
+ # print first line of file (emulates "head -1")
+ awk 'NR&gt;1{exit};1'
+
+  # print the last 2 lines of a file (emulates "tail -2")
+ awk '{y=x "\n" $0; x=$0};END{print y}'
+
+ # print the last line of a file (emulates "tail -1")
+ awk 'END{print}'
+
+ # print only lines which match regular expression (emulates "grep")
+ awk '/regex/'
+
+ # print only lines which do NOT match regex (emulates "grep -v")
+ awk '!/regex/'
+
+ # print the line immediately before a regex, but not the line
+ # containing the regex
+ awk '/regex/{print x};{x=$0}'
+ awk '/regex/{print (x=="" ? "match on line 1" : x)};{x=$0}'
+
+ # print the line immediately after a regex, but not the line
+ # containing the regex
+ awk '/regex/{getline;print}'
+
+ # grep for AAA and BBB and CCC (in any order)
+ awk '/AAA/; /BBB/; /CCC/'
+
+ # grep for AAA and BBB and CCC (in that order)
+ awk '/AAA.*BBB.*CCC/'
+
+ # print only lines of 65 characters or longer
+ awk 'length &gt; 64'
+
+ # print only lines of less than 65 characters
+ awk 'length &lt; 64'
+
+ # print section of file from regular expression to end of file
+ awk '/regex/,0'
+ awk '/regex/,EOF'
+
+ # print section of file based on line numbers (lines 8-12, inclusive)
+ awk 'NR==8,NR==12'
+
+ # print line number 52
+ awk 'NR==52'
+ awk 'NR==52 {print;exit}'          # more efficient on large files
+
+ # print section of file between two regular expressions (inclusive)
+ awk '/Iowa/,/Montana/'             # case sensitive
+
+
+SELECTIVE DELETION OF CERTAIN LINES:
+
+ # delete ALL blank lines from a file (same as "grep '.' ")
+ awk NF
+ awk '/./'
+
+
+CREDITS AND THANKS:
+
+Special thanks to Peter S. Tillier for helping me with the first release
+of this FAQ file.
+
+For additional syntax instructions, including the way to apply editing
+commands from a disk file instead of the command line, consult:
+
+"sed &amp; awk, 2nd Edition," by Dale Dougherty and Arnold Robbins
+  O'Reilly, 1997
+"UNIX Text Processing," by Dale Dougherty and Tim O'Reilly
+  Hayden Books, 1987
+"Effective awk Programming, 3rd Edition." by Arnold Robbins
+  O'Reilly, 2001
+
+To fully exploit the power of awk, one must understand "regular
+expressions." For detailed discussion of regular expressions, see
+"Mastering Regular Expressions, 2d edition" by Jeffrey Friedl
+   (O'Reilly, 2002).
+
+The manual ("man") pages on Unix systems may be helpful (try "man awk",
+"man nawk", "man regexp", or the section on regular expressions in "man
+ed"), but man pages are notoriously difficult. They are not written to
+teach awk use or regexps to first-time users, but as a reference text
+for those already acquainted with these tools.
+
+USE OF '\t' IN awk SCRIPTS: For clarity in documentation, we have used
+the expression '\t' to indicate a tab character (0x09) in the scripts.
+All versions of awk, even the UNIX System 7 version should recognize
+the '\t' abbreviation.
+
+#---end of file---</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bash"><a class="anchor" href="#_bash"></a><a class="link" href="#_bash">Bash</a></h3>
+<div class="sect3">
+<h4 id="_általános"><a class="anchor" href="#_általános"></a><a class="link" href="#_általános">Általános</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">dpkg-reconfigure tzdata
+dpkg-reconfigure locales
+update-alternatives --config editor
+
+
+stty -a
+stty stop undef</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">tree paranccsal</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">tree paranccsal, - git mappa, + fájlok</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">find . -not -path "./.git/*" | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">naptár</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">cal | sed "s/^/ /;s/$/ /;s/ $(date +%e) / $(date +%e | sed 's/./#/g') /"</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">fájlok típus szerint</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">find ${*-.} -type f | xargs file | awk -F, '{print $1}' | awk '{$1=NULL;print $0}' | sort | uniq -c | sort -nr</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">könyvtár megosztás http-n a 8000 porton</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_billentyű_kombináció"><a class="anchor" href="#_billentyű_kombináció"></a><a class="link" href="#_billentyű_kombináció">Billentyű kombináció</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Kombináció</th>
+<th class="tableblock halign-left valign-top">Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>CTRL</kbd>+<kbd>r</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rekurzív keresés a parancs historyban</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>CTRL</kbd>+<kbd>l</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">konzol ablak törlése/frissítése</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>CTRL</kbd>+<kbd>u</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kurzortól balra eső rész levágása</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>CTRL</kbd>+<kbd>k</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kurzortól jobbra eső rész levágása</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>CTRL</kbd>+<kbd>a</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sor elejére ugrás</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>CTRL</kbd>+<kbd>e</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sor végére ugrás</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>CTRL</kbd>+<kbd>w</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tolres a az elozo space-ig</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>CTRL</kbd>+<kbd>INSERT</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vágólapra másolás</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>SHIFT</kbd>+<kbd>INSERT</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vágólapról beillesztés</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>ALT</kbd>+<kbd>.</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">előző parancs utolso paraméterének behelyettesítése</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>ALT</kbd>+<kbd>&lt;NUM&gt;</kbd>+<kbd>.</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">előző parancs NUM-adik helyen lévő paraméterének behelyettesítése (alt+-&lt;NUM&gt;, szamoza a sor vegetol)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>ALT</kbd>+<kbd>*</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a beírt wildcard-ok behelyettesítése</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>e</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">alias, history, expansion alkalmazás a beírt parancson</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>CTRL</kbd>+<kbd>x</kbd>+<kbd>e</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">beírt parancs szerkesztése a VISUAL-ban megadott szerkesztőben</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_brace_expansion"><a class="anchor" href="#_brace_expansion"></a><a class="link" href="#_brace_expansion">Brace expansion</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">echo _{I,want,my,money,back}
+_I _want _my _money _back
+
+echo {I,want,my,money,back}_
+I_ want_ my_ money_ back_
+
+echo _{I,want,my,money,back}-
+_I- _want- _my- _money- _back-
+
+echo {5..12}
+5 6 7 8 9 10 11 12
+
+echo {1..10..2}
+1 3 5 7 9
+
+echo {c..k}
+c d e f g h i j k
+
+echo 1.{0..9}
+1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9
+
+echo {A..Z}{0..9}
+A0 A1 A2 A3 A4 A5 A6 A7 A8 A9 B0 B1 B2 B3 ...
+
+mkdir /home/bash/test/{foo,bar,baz,dog}
+
+somecommand -v{,,,,}
+somecommand -v -v -v -v -v</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_history_expansion"><a class="anchor" href="#_history_expansion"></a><a class="link" href="#_history_expansion">History expansion</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parancs</th>
+<th class="tableblock halign-left valign-top">Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">!!</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">előző parancs megismétlése</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">!n / !-n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n-edik vagy n-el ezelőtti parancs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">!string</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">legútóbbi string-el kezdődő parancs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">!#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a parancs eddig beírt része</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">!!:$ / !$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">előző parancs utolsó argumentuma</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Word designators</th>
+<th class="tableblock halign-left valign-top">Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">!fi:2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">előző fi-vel kezdődő parancs 2. arugmentuma</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0 (zero)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The 0th word. For many applications, this is the command word.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The nth word.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">^</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The first argument; that is, word 1.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The last argument.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The word matched by the most recent ‘?string?’ search.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x-y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A range of words; ‘-y’ abbreviates ‘0-y’.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All of the words, except the 0th. This is a synonym for ‘1-$’. It is not an error to use ‘*’ if there is just one word in the event; the empty string is returned in that case.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abbreviates ‘x-$’</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abbreviates ‘x-$’ like ‘x*’, but omits the last word.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Modifier</th>
+<th class="tableblock halign-left valign-top">Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">!!:t:r</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">előző parancsból levágja a kezdő elérési utat valamint a kiterjesztést</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Remove a trailing pathname component, leaving only the head.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Remove all leading pathname components, leaving the tail.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">r</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Remove a trailing suffix of the form ‘.suffix’, leaving the basename.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">e</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Remove all but the trailing suffix.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">p</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Print the new command but do not execute it.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Quote the substituted words, escaping further substitutions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Quote the substituted words as with ‘q’, but break into words at spaces, tabs, and newlines.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">s/old/new/</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Substitute new for the first occurrence of old in the event line. Any delimiter may be used in place of ‘/’. The delimiter may be quoted in old and new with a single backslash. If ‘&amp;’ appears in new, it is replaced by old. A single backslash will quote the ‘&amp;’. The final delimiter is optional if it is the last character on the input line.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&amp;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Repeat the previous substitution.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">g /a</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cause changes to be applied over the entire event line. Used in conjunction with ‘s’, as in gs/old/new/, or with ‘&amp;’.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">G</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Apply the following ‘s’ modifier once to each word in the event.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_subshell_etc"><a class="anchor" href="#_subshell_etc"></a><a class="link" href="#_subshell_etc">Subshell etc.</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash"># command in subshell, return value
+$(ls)
+
+# read file content
+$(&lt; file)
+
+# command output as filename
+&lt;(ls)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_script_template"><a class="anchor" href="#_script_template"></a><a class="link" href="#_script_template">Script template</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">#!/usr/bin/env sh
+
+set -o errexit      # (-e) exit immediately when a command fails
+set -o nounset      # (-u) treat unset variables as an error and exit immediately
+# set -o errtrace     # (-E) inherit custom signal traps
+set -o pipefail     # set status code to the last failed command in a pipe if any
+# set -o xtrace       # (-x) print each command before executing it</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_midnight_commander"><a class="anchor" href="#_midnight_commander"></a><a class="link" href="#_midnight_commander">Midnight Commander</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">alias mc='. /usr/lib/mc/mc-wrapper.sh'</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Bill. kombináció</th>
+<th class="tableblock halign-left valign-top">Funkció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>CTRL</kbd>+<kbd>o</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parancssor megjelenítése</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>CTRL</kbd>+<kbd>s</kbd>+<kbd>betük</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">adott fájlra/mappára ugrás</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>CTRL</kbd>+<kbd>ENTER</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">adott fájl/mappa nevének másolása a parancssorba</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>ESC</kbd>+<kbd>TAB</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parancssorban kiegészítés</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>ALT</kbd>+<kbd>n</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sorszámok edit/view ablakban</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>ALT</kbd>+<kbd>i</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">másik panel váltása az aktuális könyvtárra</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_config"><a class="anchor" href="#_config"></a><a class="link" href="#_config">Config</a></h4>
+<div class="paragraph">
+<p>config/mc/ini: <code>skin=modarin256</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mysql"><a class="anchor" href="#_mysql"></a><a class="link" href="#_mysql">MySQL</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-sql" data-lang="sql">% : karaktersorozatot helyettesít
+_ : egy karaktert helyettesít
+
+mysql -u username -p
+
+select * from ezmegaz into outfile FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+mysqldump -u username -ppassword &gt; /tmp/alldatabases.sql
+mysqldump -u username -ppassword databasename tablename &gt; /tmp/databasename.tablename.sql
+
+
+SET PASSWORD = PASSWORD('new_pass');
+
+.csv: LOAD DATA INFILE '/tmp/filename.csv' INTO TABLE [table name] FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' (field1,field2,field3);
+tab : LOAD DATA LOCAL INFILE "infile.txt" INTO TABLE [table name];
+(OPTIONALLY  ENCLOSED BY '\"' ESCAPED BY '\\\\')
+
+
+create database [databasename];
+drop database [database name];
+ALTER DATABASE [database name] CHARACTER SET utf8;
+show databases;
+use [database name];
+
+CREATE TABLE [table name] (
+  firstname VARCHAR(20) not null auto_increment primary key,
+  lastname VARCHAR(35) default 'bato',
+  email VARCHAR(35),
+  phone VARCHAR(25),
+  datestamp DATE,
+  timestamp time,
+  pgpemail VARCHAR(255)
+);
+CREATE TABLE [table name] (
+  id int auto_increment,
+  primary key (`id`)
+);
+
+
+show tables;
+drop table [table name];
+describe [table name]; = show columns from [table name];
+show create table [table name];
+
+
+INSERT INTO [table name] (Host,User,Password) VALUES('%','user',PASSWORD('password'));
+INSERT INTO [table name] VALUES('12','home','mobile');
+
+
+SELECT * FROM [table name];
+SELECT * FROM [table name] WHERE [column name] = "whatever";
+SELECT * FROM [table name] WHERE [column name] IN ("Kovács", "Tóth");
+SELECT * FROM [table name] WHERE fizetes BETWEEN 20000 AND 30000 LIMIT 10,20;
+SELECT * FROM [table name] ORDER BY name, email ASC/DESC;
+SELECT name AS nev,fizu FROM [table name] GROUP BY name;
+select id,count(*) as n from [table name] group by id having  n &gt; 1;
+---
+SELECT * FROM [table name] WHERE name like "Bob%" AND phone_number = '3444444'  and price=(SELECT MAX(price) FROM shop);
+SELECT * FROM [table name] WHERE rec RLIKE "^a$";
+SELECT nev FROM pub WHERE MATCH(nev) AGAINST('arany -ászok' IN BOOLEAN MODE);
+SELECT * FROM innivalo_kategoria LEFT OUTER JOIN innivalo ON innivalo_kategoria_id = kategoria;
+select * from pub_innivalo as t1 where felveve = (select max(felveve) from pub_innivalo where pub = t1.pub and innivalo = t1.innivalo);
+
+
+DELETE from [table name] where [column name] = "whatever";
+
+RENAME table [old name] to [new name];
+
+
+update [table name] set fizetes=(fizetes * 1.2);
+update [table name] set fizetes = 255, nev = "Bela", kor = 15 where id = 1;
+update [table name] set [column name] = "new_value" WHERE record_name = "value";
+update [database name] set [table name] = REPLACE([table name],"[String to Search For]","[String Replacement]");
+
+
+ALTER TABLE pub ADD FULLTEXT(nev);
+
+alter table [table name] add constraint check [column name] in ('bla',1,2,'asd');
+
+alter table [table name] add primary key (column name);
+
+alter table [table name] alter [column name] SET DEFAULT blaa;
+
+alter table [table name] add column [new column name] varchar(20);
+alter table [table name] add column [new column name] varchar(20) AFTER col_name;
+alter table [table name] drop column [column name];
+
+alter table [table name] modify [column name] VARCHAR(3) First auto_increment;
+alter table [table name] change [old column name] [new column name] varchar(50);
+
+alter table [table name] add unique ([column name]);
+alter table [table name] drop index [colmn name];
+
+
+select lookup.illustrationid, lookup.personid,person.birthday from lookup
+left join person on lookup.personid=person.personid=statement to join birthday in person table with primary illustration id;
+
+
+field1 = value1
+field1 &lt;&gt; value1
+field1 LIKE "value _ %"
+field1 IS NULL
+field1 IS NOT NULL
+field1 IS IN (value1, value2)
+field1 IS NOT IN (value1, value2)
+condition1 AND condition2
+condition1 OR condition2</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_patch"><a class="anchor" href="#_patch"></a><a class="link" href="#_patch">Patch</a></h3>
+<div class="sect3">
+<h4 id="_how_to_use_diff"><a class="anchor" href="#_how_to_use_diff"></a><a class="link" href="#_how_to_use_diff">How to use diff</a></h4>
+<div class="listingblock">
+<div class="title">The basic use of diff is</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">diff -u original.txt modified.txt &gt; file.patch</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">If you want to use diff against two source tree, the command is</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">diff -rupN original modified &gt; program.patch</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_how_to_use_patch"><a class="anchor" href="#_how_to_use_patch"></a><a class="link" href="#_how_to_use_patch">How to use patch</a></h4>
+<div class="listingblock">
+<div class="title">To apply the patch, change into the same directory as the unmodified file and execute</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">patch &lt; file.patch</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">This is how to apply patch to an entire directory</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">patch -p0 &lt; program.patch</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Patch applied can be simply removed by adding the -R switch</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">patch -p0 -R &lt; program.patch
+patch -R &lt; file.patch</code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre># Python</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kill all python.exe task: <code>taskkill /F /IM python.exe /T</code></p>
+</li>
+<li>
+<p>Use ipdb for debug: <code>PYTHONBREAKPOINT=ipdb.set_trace</code></p>
+</li>
+<li>
+<p>Delete pyc files: <code>find . -name '*.pyc' -delete</code></p>
+</li>
+<li>
+<p>upgrade all pipx package: pipx upgrade-all --include-injected</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_get_python_packages_and_install_from_local_folder"><a class="anchor" href="#_get_python_packages_and_install_from_local_folder"></a><a class="link" href="#_get_python_packages_and_install_from_local_folder">Get python packages and install from local folder</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-sh" data-lang="sh">pip freeze &gt; requirements.txt
+pip download -r requirements.txt -d packages/
+pip install &lt;PKGNAME&gt; --no-index --find-links ./packages</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_poetry"><a class="anchor" href="#_poetry"></a><a class="link" href="#_poetry">Poetry</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-sh" data-lang="sh">py -m pip install -U pip
+py -m pip install --user pipx
+pipx install poetry
+pipx inject poetry poetry-dynamic-versioning[plugin]
+
+pipx upgrade poetry --include-injected</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_screen"><a class="anchor" href="#_screen"></a><a class="link" href="#_screen">Screen</a></h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parancs</th>
+<th class="tableblock halign-left valign-top">Magyarázat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">screen -c /dev/null</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config betoltes..</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">screen -S bla</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">létrehozás bla névvel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">screen -rD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eloterbehoz (D máshol futó screent is előhozza)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>ctrl</kbd>+<kbd>a d</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">háttérbe küld</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>ctrl</kbd>+<kbd>a c</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">új ablak</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>ctrl</kbd>+<kbd>a shift</kbd>+<kbd>a</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nevet ad</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>ctrl</kbd>+<kbd>a</kbd>+<kbd>"</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ablaklista</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>ctrl</kbd>+<kbd>a ESC</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">másoló mód, szöveg kivál space</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="keyseq"><kbd>ctrl</kbd>+<kbd>a</kbd>+<kbd>]</kbd></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">beilleszt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a</kbd> :bufferfile notes.txt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">noteszfájl beállítás&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">screen -list</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_quick_reference"><a class="anchor" href="#_quick_reference"></a><a class="link" href="#_quick_reference">Quick Reference</a></h4>
+<div class="sect4">
+<h5 id="_getting_in"><a class="anchor" href="#_getting_in"></a><a class="link" href="#_getting_in">Getting in</a></h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">start a new screen session:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">screen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">attach to a running session:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">screen -r</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>the ultimate attach: <code>screen -dRR`</code> (Attaches to a screen session. If the session is attached elsewhere, detaches that other display. If no session exists, creates one. If multiple sessions exist, uses the first one.)</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_escape_key"><a class="anchor" href="#_escape_key"></a><a class="link" href="#_escape_key">Escape key</a></h5>
+<div class="paragraph">
+<p>All screen commnds are prefixed by an escape key, by default C-a (thatĺs Control-a, sometimes written ^A). To send a literal C-a to the programs in screen, use C-a a.
+Getting out</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">detach:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a d</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">exit screen:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">exit all of the programs in screen.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">force-exit screen:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a C-\</kbd> (not recommended)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_help"><a class="anchor" href="#_help"></a><a class="link" href="#_help">Help</a></h5>
+<div class="paragraph">
+<p>See help: <kbd>C-a ?</kbd> (lists keybindings)</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_window_management"><a class="anchor" href="#_window_management"></a><a class="link" href="#_window_management">Window Management</a></h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">create new window:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a c</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">change to last active window:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a C-a</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">change to window by number:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a &lt;number&gt;</kbd> (only for windows 0 to 9)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">change to window by number or name:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a ' &lt;number or title&gt;</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">change to next window in list:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a n</kbd> or <kbd>C-a &lt;space&gt;</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">change to previous window in list:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a p</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">see window list:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a ô</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">close current window:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Close all applications in the current window (including shell)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kill current window:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a K</kbd> (not recommended)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_split_screen"><a class="anchor" href="#_split_screen"></a><a class="link" href="#_split_screen">Split screen</a></h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">split display:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a S</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jump to next display region:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a tab</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">remove current region:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a X</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">remove all regions but the current one:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a Q</kbd></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_misc"><a class="anchor" href="#_misc"></a><a class="link" href="#_misc">Misc</a></h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">redraw window:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a C-l</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enter copy mode:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a [</kbd> (also used for viewing scrollback buffer)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">paste:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a ]</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">monitor window for activity:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a M</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">monitor window for silence:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a _</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enter digraph:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a C-v</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lock (password protect) display:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a x</kbd></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enter screen command:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><kbd>C-a :</kbd></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sed"><a class="anchor" href="#_sed"></a><a class="link" href="#_sed">SED</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">-------------------------------------------------------------------------
+USEFUL ONE-LINE SCRIPTS FOR SED (Unix stream editor)        Dec. 29, 2005
+Compiled by Eric Pement - pemente[at]northpark[dot]edu        version 5.5
+
+Latest version of this file (in English) is usually at:
+   http://sed.sourceforge.net/sed1line.txt
+   http://www.pement.org/sed/sed1line.txt
+
+This file will also available in other languages:
+  Chinese     - http://sed.sourceforge.net/sed1line_zh-CN.html
+  Czech       - http://sed.sourceforge.net/sed1line_cz.html
+  Dutch       - http://sed.sourceforge.net/sed1line_nl.html
+  French      - http://sed.sourceforge.net/sed1line_fr.html
+  German      - http://sed.sourceforge.net/sed1line_de.html
+  Italian     - http://sed.sourceforge.net/sed1line_it.html
+  Portuguese  - http://sed.sourceforge.net/sed1line_pt-BR.html
+  Spanish     - http://sed.sourceforge.net/sed1line_es.html
+
+FILE SPACING:
+
+ # double space a file
+ sed G
+
+ # double space a file which already has blank lines in it. Output file
+ # should contain no more than one blank line between lines of text.
+ sed '/^$/d;G'
+
+ # triple space a file
+ sed 'G;G'
+
+ # undo double-spacing (assumes even-numbered lines are always blank)
+ sed 'n;d'
+
+ # insert a blank line above every line which matches "regex"
+ sed '/regex/{x;p;x;}'
+
+ # insert a blank line below every line which matches "regex"
+ sed '/regex/G'
+
+ # insert a blank line above and below every line which matches "regex"
+ sed '/regex/{x;p;x;G;}'
+
+NUMBERING:
+
+ # number each line of a file (simple left alignment). Using a tab (see
+ # note on '\t' at end of file) instead of space will preserve margins.
+ sed = filename | sed 'N;s/\n/\t/'
+
+ # number each line of a file (number on left, right-aligned)
+ sed = filename | sed 'N; s/^/     /; s/ *\(.\{6,\}\)\n/\1  /'
+
+ # number each line of file, but only print numbers if line is not blank
+ sed '/./=' filename | sed '/./N; s/\n/ /'
+
+ # count lines (emulates "wc -l")
+ sed -n '$='
+
+TEXT CONVERSION AND SUBSTITUTION:
+
+ # IN UNIX ENVIRONMENT: convert DOS newlines (CR/LF) to Unix format.
+ sed 's/.$//'               # assumes that all lines end with CR/LF
+ sed 's/^M$//'              # in bash/tcsh, press Ctrl-V then Ctrl-M
+ sed 's/\x0D$//'            # works on ssed, gsed 3.02.80 or higher
+
+ # IN UNIX ENVIRONMENT: convert Unix newlines (LF) to DOS format.
+ sed "s/$/`echo -e \\\r`/"            # command line under ksh
+ sed 's/$'"/`echo \\\r`/"             # command line under bash
+ sed "s/$/`echo \\\r`/"               # command line under zsh
+ sed 's/$/\r/'                        # gsed 3.02.80 or higher
+
+ # IN DOS ENVIRONMENT: convert Unix newlines (LF) to DOS format.
+ sed "s/$//"                          # method 1
+ sed -n p                             # method 2
+
+ # IN DOS ENVIRONMENT: convert DOS newlines (CR/LF) to Unix format.
+ # Can only be done with UnxUtils sed, version 4.0.7 or higher. The
+ # UnxUtils version can be identified by the custom "--text" switch
+ # which appears when you use the "--help" switch. Otherwise, changing
+ # DOS newlines to Unix newlines cannot be done with sed in a DOS
+ # environment. Use "tr" instead.
+ sed "s/\r//" infile &gt;outfile         # UnxUtils sed v4.0.7 or higher
+ tr -d \r &lt;infile &gt;outfile            # GNU tr version 1.22 or higher
+
+ # delete leading whitespace (spaces, tabs) from front of each line
+ # aligns all text flush left
+ sed 's/^[ \t]*//'                    # see note on '\t' at end of file
+
+ # delete trailing whitespace (spaces, tabs) from end of each line
+ sed 's/[ \t]*$//'                    # see note on '\t' at end of file
+
+ # delete BOTH leading and trailing whitespace from each line
+ sed 's/^[ \t]*//;s/[ \t]*$//'
+
+ # insert 5 blank spaces at beginning of each line (make page offset)
+ sed 's/^/     /'
+
+ # align all text flush right on a 79-column width
+ sed -e :a -e 's/^.\{1,78\}$/ &amp;/;ta'  # set at 78 plus 1 space
+
+ # center all text in the middle of 79-column width. In method 1,
+ # spaces at the beginning of the line are significant, and trailing
+ # spaces are appended at the end of the line. In method 2, spaces at
+ # the beginning of the line are discarded in centering the line, and
+ # no trailing spaces appear at the end of lines.
+ sed  -e :a -e 's/^.\{1,77\}$/ &amp; /;ta'                     # method 1
+ sed  -e :a -e 's/^.\{1,77\}$/ &amp;/;ta' -e 's/\( *\)\1/\1/'  # method 2
+
+ # substitute (find and replace) "foo" with "bar" on each line
+ sed 's/foo/bar/'             # replaces only 1st instance in a line
+ sed 's/foo/bar/4'            # replaces only 4th instance in a line
+ sed 's/foo/bar/g'            # replaces ALL instances in a line
+ sed 's/\(.*\)foo\(.*foo\)/\1bar\2/' # replace the next-to-last case
+ sed 's/\(.*\)foo/\1bar/'            # replace only the last case
+
+ # substitute "foo" with "bar" ONLY for lines which contain "baz"
+ sed '/baz/s/foo/bar/g'
+
+ # substitute "foo" with "bar" EXCEPT for lines which contain "baz"
+ sed '/baz/!s/foo/bar/g'
+
+ # change "scarlet" or "ruby" or "puce" to "red"
+ sed 's/scarlet/red/g;s/ruby/red/g;s/puce/red/g'   # most seds
+ gsed 's/scarlet\|ruby\|puce/red/g'                # GNU sed only
+
+ # reverse order of lines (emulates "tac")
+ # bug/feature in HHsed v1.5 causes blank lines to be deleted
+ sed '1!G;h;$!d'               # method 1
+ sed -n '1!G;h;$p'             # method 2
+
+ # reverse each character on the line (emulates "rev")
+ sed '/\n/!G;s/\(.\)\(.*\n\)/&amp;\2\1/;//D;s/.//'
+
+ # join pairs of lines side-by-side (like "paste")
+ sed '$!N;s/\n/ /'
+
+ # if a line ends with a backslash, append the next line to it
+ sed -e :a -e '/\\$/N; s/\\\n//; ta'
+
+ # if a line begins with an equal sign, append it to the previous line
+ # and replace the "=" with a single space
+ sed -e :a -e '$!N;s/\n=/ /;ta' -e 'P;D'
+
+ # add commas to numeric strings, changing "1234567" to "1,234,567"
+ gsed ':a;s/\B[0-9]\{3\}\&gt;/,&amp;/;ta'                     # GNU sed
+ sed -e :a -e 's/\(.*[0-9]\)\([0-9]\{3\}\)/\1,\2/;ta'  # other seds
+
+ # add commas to numbers with decimal points and minus signs (GNU sed)
+ gsed -r ':a;s/(^|[^0-9.])([0-9]+)([0-9]{3})/\1\2,\3/g;ta'
+
+ # add a blank line every 5 lines (after lines 5, 10, 15, 20, etc.)
+ gsed '0~5G'                  # GNU sed only
+ sed 'n;n;n;n;G;'             # other seds
+
+SELECTIVE PRINTING OF CERTAIN LINES:
+
+ # print first 10 lines of file (emulates behavior of "head")
+ sed 10q
+
+ # print first line of file (emulates "head -1")
+ sed q
+
+ # print the last 10 lines of a file (emulates "tail")
+ sed -e :a -e '$q;N;11,$D;ba'
+
+ # print the last 2 lines of a file (emulates "tail -2")
+ sed '$!N;$!D'
+
+ # print the last line of a file (emulates "tail -1")
+ sed '$!d'                    # method 1
+ sed -n '$p'                  # method 2
+
+ # print the next-to-the-last line of a file
+ sed -e '$!{h;d;}' -e x              # for 1-line files, print blank line
+ sed -e '1{$q;}' -e '$!{h;d;}' -e x  # for 1-line files, print the line
+ sed -e '1{$d;}' -e '$!{h;d;}' -e x  # for 1-line files, print nothing
+
+ # print only lines which match regular expression (emulates "grep")
+ sed -n '/regexp/p'           # method 1
+ sed '/regexp/!d'             # method 2
+
+ # print only lines which do NOT match regexp (emulates "grep -v")
+ sed -n '/regexp/!p'          # method 1, corresponds to above
+ sed '/regexp/d'              # method 2, simpler syntax
+
+ # print the line immediately before a regexp, but not the line
+ # containing the regexp
+ sed -n '/regexp/{g;1!p;};h'
+
+ # print the line immediately after a regexp, but not the line
+ # containing the regexp
+ sed -n '/regexp/{n;p;}'
+
+ # print 1 line of context before and after regexp, with line number
+ # indicating where the regexp occurred (similar to "grep -A1 -B1")
+ sed -n -e '/regexp/{=;x;1!p;g;$!N;p;D;}' -e h
+
+ # grep for AAA and BBB and CCC (in any order)
+ sed '/AAA/!d; /BBB/!d; /CCC/!d'
+
+ # grep for AAA and BBB and CCC (in that order)
+ sed '/AAA.*BBB.*CCC/!d'
+
+ # grep for AAA or BBB or CCC (emulates "egrep")
+ sed -e '/AAA/b' -e '/BBB/b' -e '/CCC/b' -e d    # most seds
+ gsed '/AAA\|BBB\|CCC/!d'                        # GNU sed only
+
+ # print paragraph if it contains AAA (blank lines separate paragraphs)
+ # HHsed v1.5 must insert a 'G;' after 'x;' in the next 3 scripts below
+ sed -e '/./{H;$!d;}' -e 'x;/AAA/!d;'
+
+ # print paragraph if it contains AAA and BBB and CCC (in any order)
+ sed -e '/./{H;$!d;}' -e 'x;/AAA/!d;/BBB/!d;/CCC/!d'
+
+ # print paragraph if it contains AAA or BBB or CCC
+ sed -e '/./{H;$!d;}' -e 'x;/AAA/b' -e '/BBB/b' -e '/CCC/b' -e d
+ gsed '/./{H;$!d;};x;/AAA\|BBB\|CCC/b;d'         # GNU sed only
+
+ # print only lines of 65 characters or longer
+ sed -n '/^.\{65\}/p'
+
+ # print only lines of less than 65 characters
+ sed -n '/^.\{65\}/!p'        # method 1, corresponds to above
+ sed '/^.\{65\}/d'            # method 2, simpler syntax
+
+ # print section of file from regular expression to end of file
+ sed -n '/regexp/,$p'
+
+ # print section of file based on line numbers (lines 8-12, inclusive)
+ sed -n '8,12p'               # method 1
+ sed '8,12!d'                 # method 2
+
+ # print line number 52
+ sed -n '52p'                 # method 1
+ sed '52!d'                   # method 2
+ sed '52q;d'                  # method 3, efficient on large files
+
+ # beginning at line 3, print every 7th line
+ gsed -n '3~7p'               # GNU sed only
+ sed -n '3,${p;n;n;n;n;n;n;}' # other seds
+
+ # print section of file between two regular expressions (inclusive)
+ sed -n '/Iowa/,/Montana/p'             # case sensitive
+
+SELECTIVE DELETION OF CERTAIN LINES:
+
+ # print all of file EXCEPT section between 2 regular expressions
+ sed '/Iowa/,/Montana/d'
+
+ # delete duplicate, consecutive lines from a file (emulates "uniq").
+ # First line in a set of duplicate lines is kept, rest are deleted.
+ sed '$!N; /^\(.*\)\n\1$/!P; D'
+
+ # delete duplicate, nonconsecutive lines from a file. Beware not to
+ # overflow the buffer size of the hold space, or else use GNU sed.
+ sed -n 'G; s/\n/&amp;&amp;/; /^\([ -~]*\n\).*\n\1/d; s/\n//; h; P'
+
+ # delete all lines except duplicate lines (emulates "uniq -d").
+ sed '$!N; s/^\(.*\)\n\1$/\1/; t; D'
+
+ # delete the first 10 lines of a file
+ sed '1,10d'
+
+ # delete the last line of a file
+ sed '$d'
+
+ # delete the last 2 lines of a file
+ sed 'N;$!P;$!D;$d'
+
+ # delete the last 10 lines of a file
+ sed -e :a -e '$d;N;2,10ba' -e 'P;D'   # method 1
+ sed -n -e :a -e '1,10!{P;N;D;};N;ba'  # method 2
+
+ # delete every 8th line
+ gsed '0~8d'                           # GNU sed only
+ sed 'n;n;n;n;n;n;n;d;'                # other seds
+
+ # delete lines matching pattern
+ sed '/pattern/d'
+
+ # delete ALL blank lines from a file (same as "grep '.' ")
+ sed '/^$/d'                           # method 1
+ sed '/./!d'                           # method 2
+
+ # delete all CONSECUTIVE blank lines from file except the first; also
+ # deletes all blank lines from top and end of file (emulates "cat -s")
+ sed '/./,/^$/!d'          # method 1, allows 0 blanks at top, 1 at EOF
+ sed '/^$/N;/\n$/D'        # method 2, allows 1 blank at top, 0 at EOF
+
+ # delete all CONSECUTIVE blank lines from file except the first 2:
+ sed '/^$/N;/\n$/N;//D'
+
+ # delete all leading blank lines at top of file
+ sed '/./,$!d'
+
+ # delete all trailing blank lines at end of file
+ sed -e :a -e '/^\n*$/{$d;N;ba' -e '}'  # works on all seds
+ sed -e :a -e '/^\n*$/N;/\n$/ba'        # ditto, except for gsed 3.02.*
+
+ # delete the last line of each paragraph
+ sed -n '/^$/{p;h;};/./{x;/./p;}'
+
+SPECIAL APPLICATIONS:
+
+ # remove nroff overstrikes (char, backspace) from man pages. The 'echo'
+ # command may need an -e switch if you use Unix System V or bash shell.
+ sed "s/.`echo \\\b`//g"    # double quotes required for Unix environment
+ sed 's/.^H//g'             # in bash/tcsh, press Ctrl-V and then Ctrl-H
+ sed 's/.\x08//g'           # hex expression for sed 1.5, GNU sed, ssed
+
+ # get Usenet/e-mail message header
+ sed '/^$/q'                # deletes everything after first blank line
+
+ # get Usenet/e-mail message body
+ sed '1,/^$/d'              # deletes everything up to first blank line
+
+ # get Subject header, but remove initial "Subject: " portion
+ sed '/^Subject: */!d; s///;q'
+
+ # get return address header
+ sed '/^Reply-To:/q; /^From:/h; /./d;g;q'
+
+ # parse out the address proper. Pulls out the e-mail address by itself
+ # from the 1-line return address header (see preceding script)
+ sed 's/ *(.*)//; s/&gt;.*//; s/.*[:&lt;] *//'
+
+ # add a leading angle bracket and space to each line (quote a message)
+ sed 's/^/&gt; /'
+
+ # delete leading angle bracket &amp; space from each line (unquote a message)
+ sed 's/^&gt; //'
+
+ # remove most HTML tags (accommodates multiple-line tags)
+ sed -e :a -e 's/&lt;[^&gt;]*&gt;//g;/&lt;/N;//ba'
+
+ # extract multi-part uuencoded binaries, removing extraneous header
+ # info, so that only the uuencoded portion remains. Files passed to
+ # sed must be passed in the proper order. Version 1 can be entered
+ # from the command line; version 2 can be made into an executable
+ # Unix shell script. (Modified from a script by Rahul Dhesi.)
+ sed '/^end/,/^begin/d' file1 file2 ... fileX | uudecode   # vers. 1
+ sed '/^end/,/^begin/d' "$@" | uudecode                    # vers. 2
+
+ # sort paragraphs of file alphabetically. Paragraphs are separated by blank
+ # lines. GNU sed uses \v for vertical tab, or any unique char will do.
+ sed '/./{H;d;};x;s/\n/={NL}=/g' file | sort | sed '1s/={NL}=//;s/={NL}=/\n/g'
+ gsed '/./{H;d};x;y/\n/\v/' file | sort | sed '1s/\v//;y/\v/\n/'
+
+ # zip up each .TXT file individually, deleting the source file and
+ # setting the name of each .ZIP file to the basename of the .TXT file
+ # (under DOS: the "dir /b" switch returns bare filenames in all caps).
+ echo @echo off &gt;zipup.bat
+ dir /b *.txt | sed "s/^\(.*\)\.TXT/pkzip -mo \1 \1.TXT/" &gt;&gt;zipup.bat
+
+TYPICAL USE: Sed takes one or more editing commands and applies all of
+them, in sequence, to each line of input. After all the commands have
+been applied to the first input line, that line is output and a second
+input line is taken for processing, and the cycle repeats. The
+preceding examples assume that input comes from the standard input
+device (i.e, the console, normally this will be piped input). One or
+more filenames can be appended to the command line if the input does
+not come from stdin. Output is sent to stdout (the screen). Thus:
+
+ cat filename | sed '10q'        # uses piped input
+ sed '10q' filename              # same effect, avoids a useless "cat"
+ sed '10q' filename &gt; newfile    # redirects output to disk
+
+For additional syntax instructions, including the way to apply editing
+commands from a disk file instead of the command line, consult "sed &amp;
+awk, 2nd Edition," by Dale Dougherty and Arnold Robbins (O'Reilly,
+1997; http://www.ora.com), "UNIX Text Processing," by Dale Dougherty
+and Tim O'Reilly (Hayden Books, 1987) or the tutorials by Mike Arst
+distributed in U-SEDIT2.ZIP (many sites). To fully exploit the power
+of sed, one must understand "regular expressions." For this, see
+"Mastering Regular Expressions" by Jeffrey Friedl (O'Reilly, 1997).
+The manual ("man") pages on Unix systems may be helpful (try "man
+sed", "man regexp", or the subsection on regular expressions in "man
+ed"), but man pages are notoriously difficult. They are not written to
+teach sed use or regexps to first-time users, but as a reference text
+for those already acquainted with these tools.
+
+QUOTING SYNTAX: The preceding examples use single quotes ('...')
+instead of double quotes ("...") to enclose editing commands, since
+sed is typically used on a Unix platform. Single quotes prevent the
+Unix shell from intrepreting the dollar sign ($) and backquotes
+(`...`), which are expanded by the shell if they are enclosed in
+double quotes. Users of the "csh" shell and derivatives will also need
+to quote the exclamation mark (!) with the backslash (i.e., \!) to
+properly run the examples listed above, even within single quotes.
+Versions of sed written for DOS invariably require double quotes
+("...") instead of single quotes to enclose editing commands.
+
+USE OF '\t' IN SED SCRIPTS: For clarity in documentation, we have used
+the expression '\t' to indicate a tab character (0x09) in the scripts.
+However, most versions of sed do not recognize the '\t' abbreviation,
+so when typing these scripts from the command line, you should press
+the TAB key instead. '\t' is supported as a regular expression
+metacharacter in awk, perl, and HHsed, sedmod, and GNU sed v3.02.80.
+
+VERSIONS OF SED: Versions of sed do differ, and some slight syntax
+variation is to be expected. In particular, most do not support the
+use of labels (:name) or branch instructions (b,t) within editing
+commands, except at the end of those commands. We have used the syntax
+which will be portable to most users of sed, even though the popular
+GNU versions of sed allow a more succinct syntax. When the reader sees
+a fairly long command such as this:
+
+   sed -e '/AAA/b' -e '/BBB/b' -e '/CCC/b' -e d
+
+it is heartening to know that GNU sed will let you reduce it to:
+
+   sed '/AAA/b;/BBB/b;/CCC/b;d'      # or even
+   sed '/AAA\|BBB\|CCC/b;d'
+
+In addition, remember that while many versions of sed accept a command
+like "/one/ s/RE1/RE2/", some do NOT allow "/one/! s/RE1/RE2/", which
+contains space before the 's'. Omit the space when typing the command.
+
+OPTIMIZING FOR SPEED: If execution speed needs to be increased (due to
+large input files or slow processors or hard disks), substitution will
+be executed more quickly if the "find" expression is specified before
+giving the "s/.../.../" instruction. Thus:
+
+   sed 's/foo/bar/g' filename         # standard replace command
+   sed '/foo/ s/foo/bar/g' filename   # executes more quickly
+   sed '/foo/ s//bar/g' filename      # shorthand sed syntax
+
+On line selection or deletion in which you only need to output lines
+from the first part of the file, a "quit" command (q) in the script
+will drastically reduce processing time for large files. Thus:
+
+   sed -n '45,50p' filename           # print line nos. 45-50 of a file
+   sed -n '51q;45,50p' filename       # same, but executes much faster
+
+If you have any additional scripts to contribute or if you find errors
+in this document, please send e-mail to the compiler. Indicate the
+version of sed you used, the operating system it was compiled for, and
+the nature of the problem. To qualify as a one-liner, the command line
+must be 65 characters or less. Various scripts in this file have been
+written or contributed by:
+
+ Al Aab                   # founder of "seders" list
+ Edgar Allen              # various
+ Yiorgos Adamopoulos      # various
+ Dale Dougherty           # author of "sed &amp; awk"
+ Carlos Duarte            # author of "do it with sed"
+ Eric Pement              # author of this document
+ Ken Pizzini              # author of GNU sed v3.02
+ S.G. Ravenhall           # great de-html script
+ Greg Ubben               # many contributions &amp; much help
+-------------------------------------------------------------------------</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tar"><a class="anchor" href="#_tar"></a><a class="link" href="#_tar">TAR</a></h3>
+<div class="listingblock">
+<div class="title">Kicsomagolni tar állományt</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">tar -xvvf file.tar</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Megadott könyvtárba kicsomagolás</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">tar -xvf file.tar -C /destination/dir/</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Kitömöríteni tar.Z állományt</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">tar -xvZf file.tar.Z</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Kitömöríteni gzippelt állományt</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">tar -xvzf file.tar.gz</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Kitömöríteni bzippelt állományt</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">tar -xvjf file.tar.bz2 (vagy tar -xvIf file.tar.bz2 régebbi tar esetén)</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Arhiv készítés c kapcsolóval az x helyett, eloször az arhív állományt kell magadni majd utána a tömörítendő anyagot. pl. :</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">tar cvvjf file.tar.bz2 /tmp/file1.kit /mashol/file2.kit /teljesdir</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">biztimásolat</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">tar --exclude=bm-20071027.tgz -Lczf bm-20071027.tgz ~</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_backup"><a class="anchor" href="#_backup"></a><a class="link" href="#_backup">Backup</a></h4>
+<div class="paragraph">
+<p>A snapshot fálban tárolja a lementett fájlok adatait, ugyan azt a fájlt többször megadva incrementális mentés jön létre.</p>
+</div>
+<div class="listingblock">
+<div class="title">Biztonsági másolat készítés</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">tar --listed-incremental=work.snapshot -cvf work-20150105-0937.full.tar /path/to/dir</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Visszaállítás</div>
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">tar --listed-incremental=/dev/null -xvf work-20150105-0937.full.tar</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_kapcsolók"><a class="anchor" href="#_kapcsolók"></a><a class="link" href="#_kapcsolók">Kapcsolók</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Kapcsoló</th>
+<th class="tableblock halign-left valign-top">Magyaráza</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-v</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">verbose mode</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-c</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">becsomagolás</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kicsomagolás</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-z</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gzip</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-j</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bzip</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-Z</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z állomány</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-f &lt;filename&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kimenetei/bemeneti fájl használata</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-C &lt;path&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kicsomagolás a megadott helyre</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">követi a symlinkeket.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--exclude=valami</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nem veszi figyelembe a "valami" -t</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--listed-incremental=&lt;filename&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">inkrementális mentések készítése</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_vim"><a class="anchor" href="#_vim"></a><a class="link" href="#_vim">vim</a></h3>
+<div class="sect3">
+<h4 id="_config_2"><a class="anchor" href="#_config_2"></a><a class="link" href="#_config_2">Config</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parancs</th>
+<th class="tableblock halign-left valign-top">Magyarázat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fenc (fileencoding)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set utf-8 encoding (latin1 is usual).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ft (filetype)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set .module as php file type (with syntax).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ff (fileformat)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ai (autoindent)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Copy indent when starting new line.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">si (smartindent)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indent when starting a new line after '{'.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sw (shiftwidth)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of spaces to use for autoindent steps.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ts (tabstop)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of spaces that a tab counts for.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">et (expandtab)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use spaces to insert a tab.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nu (number)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Precede each line with its line number.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fdm (foldmethod)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fold code by indent.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fdn (foldnestmax)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 maximum nesting (functions in module).</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Pl: <code>vim:fenc=utf-8:ft=php:ai:si:ts=2:sw=2:et:nu:fdm=indent:fdn=1:</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wget"><a class="anchor" href="#_wget"></a><a class="link" href="#_wget">Wget</a></h3>
+<div class="sect3">
+<h4 id="_mirror_wget"><a class="anchor" href="#_mirror_wget"></a><a class="link" href="#_mirror_wget">Mirror wget</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">copy /b *.txt combined.txt
+wget -m -w 2 -p  -k -E -P\wget_files\example1 http://www.yourdomain.com
+wget -m -w 3 -p -P\wget_files\example2 ftp://username:password@ftp.yourdomain.com
+
+( --no-parent -nc -c )
+
+wget --save-cookies cookies.txt --keep-session-cookies --post-data 'login_e_mail=&amp;login_passwd=' http://www.yourdomain.com
+
+wget --load-cookies cookies.txt -w 1 -i files.txt
+wget --load-cookies cookies.txt --content-disposition -w 2 -i files.txt</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_kapcsolók_2"><a class="anchor" href="#_kapcsolók_2"></a><a class="link" href="#_kapcsolók_2">Kapcsolók</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Kapcsoló</th>
+<th class="tableblock halign-left valign-top">Leírás</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-A list; list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">accept</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-R list; list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">reject</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-E</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">html extension</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-k</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">linkek konvertálása</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-w</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vár mp-t</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-m</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mirror</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-l</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mélység</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-i</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fájból veszi a címeket</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-nH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kikapcsolja gazdagép-névvel megegyezo könyvtár létrehozását</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--ftp-user</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--ftp-password</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--http-user</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--http-password</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">--content-disposition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ha a letöltés nem a megfelelő névvel jön létre (pl index.html stb.)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ssh"><a class="anchor" href="#_ssh"></a><a class="link" href="#_ssh">SSH</a></h3>
+<div class="paragraph">
+<p>Security key stored on the hardware key, with name ssh:lesser and 250 KDF rounds (eg: yubikey)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">ssh-keygen -t ed25519-sk -a 250 -Oresident -Oapplication=ssh:lesser -f ~/.ssh/ed25519_sk_lesser</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Load key to ssh agent from the device</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">ssh-add -K</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gpg"><a class="anchor" href="#_gpg"></a><a class="link" href="#_gpg">GPG</a></h3>
+<div class="paragraph">
+<p>Source: <a href="https://github.com/drduh/YubiKey-Guide" class="bare">https://github.com/drduh/YubiKey-Guide</a></p>
+</div>
+<div class="sect3">
+<h4 id="_generate"><a class="anchor" href="#_generate"></a><a class="link" href="#_generate">Generate</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">export GNUPGHOME=$(mktemp -d)
+wget -O $GNUPGHOME/gpg.conf https://raw.githubusercontent.com/drduh/config/master/gpg.conf
+
+
+gpg --expert --full-generate-key
+# certity capatiblity only
+export KEYID=0x....
+
+gpg --expert --edit-key $KEYID
+    addkey
+    ... 
+    ...
+    adduid
+    ...
+    trust
+        5
+    uid 1
+        primary
+    save
+
+gpg -K
+# gpg --export $KEYID | hokey lint
+
+gpg --armor --export-secret-keys $KEYID &gt; $GNUPGHOME/mastersub.key
+gpg --armor --export-secret-subkeys $KEYID &gt; $GNUPGHOME/sub.key
+
+gpg --gen-revoke $KEYID --output $GNUPGHOME/revoke.asc
+
+gpg --armor --export $KEYID | sudo tee $GNUPGHOME/gpg-$KEYID-$(date +%F).txt
+gpg --export-ssh-key $KEYID
+
+# cp -avi $GNUPGHOME /mnt/encrypted-storage/
+# gpg --keyserver pgp.mit.edu --send-key $KEYID
+
+gpg --card-edit
+    admin
+        kdf-setup
+        passwd
+    name
+    lang
+    login
+    list
+    forcesig
+    quit
+
+gpg --edit-key $KEYID
+    key 1
+        keytocard
+    key 1
+    key 2
+        keytocard
+    ...
+    save
+
+gpg -K</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_usage"><a class="anchor" href="#_usage"></a><a class="link" href="#_usage">Usage</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">gpg --import /mnt/0x*txt
+# gpg --recv $KEYID
+
+gpg --edit-key $KEYID
+    trust
+        5
+
+gpg --card-status
+
+
+# echo "test message string" | gpg --encrypt --armor --recipient $KEYID -o encrypted.txt
+# gpg --decrypt --armor encrypted.txt
+# echo "test message string" | gpg --armor --clearsign &gt; signed.txt
+# gpg --verify signed.txt
+# secret () {
+#         output=~/"${1}".$(date +%s).enc
+#         gpg --encrypt --armor --output ${output} -r 0x0000 -r 0x0001 -r 0x0002 "${1}" &amp;&amp; echo "${1} -&gt; ${output}"
+# }
+# reveal () {
+#         output=$(echo "${1}" | rev | cut -c16- | rev)
+#         gpg --decrypt --output ${output} "${1}" &amp;&amp; echo "${1} -&gt; ${output}"
+# }
+
+cd ~/.gnupg
+wget https://raw.githubusercontent.com/drduh/config/master/gpg-agent.conf
+
+# export GPG_TTY="$(tty)"
+# export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+# gpg-connect-agent updatestartuptty /bye &gt; /dev/null
+
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+
+# on win10 with gpg4win and git bash
+eval $(/usr/bin/ssh-pageant -r -a "/tmp/.ssh-pageant-$USERNAME")
+# ssh-add -L # list keys
+
+gpgconf --kill gpg-agent</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_quick_way"><a class="anchor" href="#_quick_way"></a><a class="link" href="#_quick_way">Quick way</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash"># create a template for the master key
+$ cat gen-params
+%echo Generating a basic OpenPGP key
+Key-Type: RSA
+Key-Length: 4096
+Key-Usage: cert
+Name-Real: Joe Tester
+Name-Email: joe@foo.bar
+Expire-Date: 0
+Passphrase: hey
+# Do a commit here, so that we can later print "done" :-)
+%commit
+%echo done
+
+# generate master key (only certification), save fingerprint
+gpg --batch --generate-key gen-params
+FPR=$(gpg --list-options show-only-fpr-mbox --list-secret-keys | awk '{print $1}')
+
+# generate sign, encrypt and auth subkeys
+gpg --batch --passphrase 'hey' --quick-add-key $FPR rsa4096 sign 1y
+gpg --batch --passphrase 'hey' --quick-add-key $FPR rsa4096 encrypt 1y
+gpg --batch --passphrase 'hey' --quick-add-key $FPR rsa4096 auth 1y</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2025-04-18 05:58:07 UTC
+</div>
+</div>
+</body>
+</html>
