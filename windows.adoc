@@ -1,3 +1,5 @@
+# Windows
+
 Check windows licence type: `slmgr /dli` / `slmgr /dlv`
 
 Unregister licence: `slmgr /upk`

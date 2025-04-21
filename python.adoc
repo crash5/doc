@@ -1,4 +1,4 @@
- # Python
+# Python
 
 - Kill all python.exe task: `taskkill /F /IM python.exe /T`
 - Use ipdb for debug: `PYTHONBREAKPOINT=ipdb.set_trace`

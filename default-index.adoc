@@ -16,8 +16,6 @@ include::origami.adoc[]
 
 include::other_files.adoc[]
 
-include::programming-names.md[]
-
 include::windows.md[]
 
 :leveloffset: 0
@@ -53,3 +51,7 @@ include::wget.adoc[]
 include::ssh.md[]
 
 include::gpg.md[]
+
+include::git.md[]
+
+include:container.adoc[]
