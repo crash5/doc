@@ -5,10 +5,16 @@ Check windows licence type: `slmgr /dli` / `slmgr /dlv`
 Unregister licence: `slmgr /upk`
 Remove licence from registry: `slmgr /cpky`
 
+## Assing letter to partition from command line
+
+```
+diskpart / list volume / select volume X / assign letter=Y
+Use remove letter=Y to clear a letter
+```
 
 ## WSL
 
- ```
+```
 wsl --list --online
 wsl --install -d Ubuntu-22.04
 wsl --setdefault Ubuntu-22.04
