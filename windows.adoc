@@ -5,6 +5,19 @@ Check windows licence type: `slmgr /dli` / `slmgr /dlv`
 Unregister licence: `slmgr /upk`
 Remove licence from registry: `slmgr /cpky`
 
+## Win11 offline install
+- Shift+F11 on network conn. screen then `%systemroot%\System32\oobe\BypassNRO.cmd`
+
+
+Group Policy Editor > User Configuration > Windows Components > Windows Copilot. In the right pane, enable the policy named: Turn off Windows Copilot.
+
+## Package uninstall
+```pwsh
+Get-AppxPackage | Select Name, PackageFullName
+Get-AppxPackage -AllUsers *name* | Remove-AppxPackage
+```
+
+
 ## Assing letter to partition from command line
 
 ```
